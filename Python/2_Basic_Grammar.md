@@ -7,9 +7,15 @@
 
 
 
+
+
 ### Identation
 
 * Space sensitive >> space key * 4 or 1 tab
+
+
+
+
 
 
 
@@ -40,9 +46,13 @@
 
 
 
+
+
 ### type()
 
 * Type of the assigned value
+
+
 
 
 
@@ -63,7 +73,10 @@
   2
   ```
 
-  
+
+
+
+
 
 ### assignment
 
@@ -89,17 +102,36 @@
 
 
 
+
+
+
+
 ## 식별자(Identifiers)
 
 * How to name variables?
+
 * **The name used to identify Python objects**
+
 * Rule
   * alphabet, underscore(_), numbers
+  
   * No number at first
+  
   * No length limit, Case-sensitive
+  
   * Following keywords can't be used as reserved words
     * True, False, None, if, elif, else, is, in, except, finally, not, or, and, pass, return, try, while, with, yield, for, as, assert, async, await, break, continue, from, for, global, def, del, lambda, nonlocal, import
+    
+    * ```python
+      import keyworkd  #you can see all keywords in Pyton
+      print(keyword.kwlist)
+      ```
+    
   * Do not use **Built in function내장함수** or **Module**
+
+
+
+
 
 
 
@@ -129,6 +161,10 @@
   ```
 
   str
+
+
+
+
 
 
 

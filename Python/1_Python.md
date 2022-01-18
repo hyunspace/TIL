@@ -13,6 +13,8 @@
 
 
 
+
+
 ## 파이썬 개발환경 종류
 
 * Interactive computing(대화형 환경)
@@ -20,6 +22,8 @@
   * Jupyter Notebook
 * Run Script
   * *.py >> IDE or Text Editor
+
+
 
 
 
@@ -31,11 +35,15 @@
 
 
 
+
+
 ### Jupyter Lab
 
 * The latest **web-based interactive development environment** for notebooks, code, and data
 
 * Generally used in data analysis, machine learning, deep learning.
+
+
 
 
 

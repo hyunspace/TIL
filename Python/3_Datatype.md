@@ -4,6 +4,8 @@
 
 
 
+
+
 ## None
 
 *  `NoneType` is the type for the `None` object, which is an object that indicates __*no value*__. `None` is the return value of functions that "don't return anything".  [Stack Overflower](https://stackoverflow.com/questions/21095654/what-is-a-nonetype-object)
@@ -13,6 +15,8 @@
   ```
 
   <Class 'NoneType'>
+
+
 
 
 
@@ -32,7 +36,11 @@
 
 
 
+
+
 ---
+
+
 
 
 
@@ -49,6 +57,8 @@
   * binary number : 0b
   * octal number : 0o
   * hexadecimal : 0x 
+
+
 
 
 
@@ -79,15 +89,20 @@
 
   ```python
   # 1. a tiny value
-  abs(a - b) <= 1e-10
+  abs(num1 - num2) <= 1e-10
   ```
 
   True
 
   ```python
   # 2. machine epslion
+  
   # 3. math.isclose(a, b)
+  import math
+  math.isclose(num1, num2)
   ```
+
+
 
 
 
@@ -95,7 +110,11 @@
 
 
 
+
+
 ---
+
+
 
 
 
@@ -118,10 +137,14 @@
 
 
 
+
+
 #### Triple Quotes 삼중따옴표
 
 * Quotes in quotes
 * Multiline strings
+
+
 
 
 
@@ -145,34 +168,44 @@
   |       \\'       |   Single quote(`'`)    |
   |       \\"       |   Double quote(`"`)    |
 
+  ```python
+  # make a rectagle with *
+  n, m = 3, 4
+  print((('*' * n) + '\n') * m)
+  ```
   
+
+
+
+
 
 ### String Interpolation 문자열 사이 변수
 
 * Method to make string sequence using variables
 
   * %-formatting
-  * str.format()
-  * f-strings: python 3.6+
+  
+    ```python
+    print('Hello, %s' % name)
+    print('My GPA is %d' % gpa)
+    print('My GPA is %.2f' % gpa)
+    ```
+  
+  * **str.format()** : Python 3.5v
 
-  ```python
-  print('Hello, %s' % name)
-  print('My GPA is %d' % gpa)
-  print('My GPA is %.2f' % gpa)
-  ```
+    ```python
+    print('Hi, {}!'.format(name))
+    # print('Hi, {} and {}!'.format(name, name2))
+    ```
+  
+  * **f-strings** : python 3.6+ v
+  
+    ```python
+    print(f'Hi, {name}!')
+    ```
 
-  ​	Hello, Kate
-
-  ​	My GPA is 4
-
-  ​	My GPA is 4.50
-
-  ```python
-  pi = 3.141592
-  f'Perimeter is {pi:.3}. when radius is 2 its area is {pi*2*2}
-  ```
-
-  Perimeter is 3.141, when radius is 2 its area is 12.566368
+    
+  
 
 
 
