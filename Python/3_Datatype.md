@@ -122,6 +122,8 @@
 
 ### String Type
 
+**IMMUTABLE, ORDERED, ITERABLE**
+
 * sequences of **character data**
 
 * String literals may be delimited using either single('') or double quotes(""). [Real Python](https://realpython.com/python-data-types/#strings)
