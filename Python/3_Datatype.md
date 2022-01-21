@@ -2,9 +2,9 @@
 
 ![img](3_Datatype.assets/12.jpg)
 
+<br/>
 
-
-
+<br/>
 
 ## None
 
@@ -12,13 +12,17 @@
 
   ```python
   print(type(None))
+  a = None
+  print(type(a))
   ```
-
+  
+  <Class 'NoneType'>
+  
   <Class 'NoneType'>
 
+<br/>
 
-
-
+<br/>
 
 ## Boolean Type
 
@@ -36,13 +40,13 @@
 
 
 
-
+<br/>
 
 ---
 
+<br/>
 
-
-
+<br/>
 
 ## Numeric Type 수치형
 
@@ -58,9 +62,7 @@
   * octal number : 0o
   * hexadecimal : 0x 
 
-
-
-
+<br/>
 
 ### Float 실수
 
@@ -85,7 +87,7 @@
 
   0.120000000000000**1**
 
-* **Check if the float value is smaller than very small value**
+* **Check if the float value is smaller than a very small value**
 
   ```python
   # 1. a tiny value
@@ -102,21 +104,20 @@
   math.isclose(num1, num2)
   ```
 
+<br/>
 
-
-
+<br/>
 
 ### Complex 복소수
 
+* 실수 + 허수
+* 허수부는 j로 표현
 
-
-
+<br/>
 
 ---
 
-
-
-
+<br/>
 
 ## String Type 문자열
 
@@ -134,21 +135,36 @@
 
   Jen, "Hi"
 
-* Immutable
+* Immutable 변경X
+
+  ```python
+  a = python
+  a[-1] = '!'
+  # TypeError
+  ```
+
 * Iterable
 
+  ```python
+  b = '9256'
+  for char in b:
+      print(char)
+  ```
 
+  ​	[결과]
+  ​	9
+  ​	2
+  ​	5
+  ​	6
 
-
+<br/>
 
 #### Triple Quotes 삼중따옴표
 
 * Quotes in quotes
 * Multiline strings
 
-
-
-
+<br/>
 
 #### Escape Sequence `\`
 
@@ -177,9 +193,9 @@
   ```
   
 
+<br/>
 
-
-
+<br/>
 
 ### String Interpolation 문자열 사이 변수
 
@@ -206,14 +222,29 @@
     print(f'Hi, {name}!')
     ```
 
+    * formating / 형식 지정이 가능하다
     
+      ```python
+      import datetime
+      today = datetime.datetime.now()
+      # 현재 시각과 날짜 출력하기
+      print(today)
+      2022-01-22 03:06:~
+      
+      # 출력 형식을 지정해보자
+      # 년/월/일/요일 : %y, %m, %d, %A
+      
+      print(f'오늘은 {today:%y}년 {today:%m}월 {today: %d}일이야.')
+      ```
+    
+    
+    * 연산도 가능하다
+    
+      ```python
+      a = 2.123
+      b = 4.351
+      print(f'가로가 {a:0.2f}, 세로가 {b:0.2f}일 때 사각형의 넓이는 {a * b:0.2f}')
+      ```
+    
+      가로가 2.12, 세로가 4.35일 때 사각형의 넓이는 9.24
   
-
-
-
-
-
-
-
-
-
