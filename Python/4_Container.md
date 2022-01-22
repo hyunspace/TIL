@@ -25,6 +25,7 @@ c = {1}
 
 * Any object that holds an arbitrary number of other objects. Generally, containers provide a way to access the contained objects and to iterate over them. [Stack Overflow](https://stackoverflow.com/questions/11575925/what-exactly-are-containers-in-python-and-what-are-all-the-python-container)
   * List, Tuple
+* 서로 다른 자료형 저장O
 
 
 
@@ -41,17 +42,25 @@ c = {1}
 
 ## Sequence Container 시퀀스형 컨테이너
 
+* Ordered (순서대로 나열된) != Sorted(정렬된)
+* 특정 위치의 데이터 가리킬 수 있음
+* List, Tuple, Range, String, (Binary)
+
+<br/>
+
 ### List 리스트
 
 **MUTABLE, ORDERED, ITERABLE**
 
 * which can be written as **a list of comma-separated values (items) between square brackets**. Lists might contain items of different types, but usually the items all have the same type. [docs.python.org](https://docs.python.org/3/tutorial/introduction.html)
-
-* Starts from 0
-
+* Indexes start from 0
 * **Mutable** ; 생성 이후 내용 변경 가능
-
 * ALWAYS between `[]`
+
+#### CREATE & ACCESS
+
+* `[]` or `list()`
+* `list_name[index]`
 
 * Access through **index** ; list[0]
 
@@ -79,38 +88,40 @@ c = {1}
 
 <br/>
 
+---
+
 ### Tuple 튜플
 
+**IMMUTABLE(수정불가능)**
+
 * A tuple consists of a number of values separated by comma
-
+* (value1, value2)
+* 리스트`[]`와 유사, but `()`
 * Starts from 0
-
-* **Immutable**
-
 * ALWAYS between `()`
+
+#### CREATE & ACCESS
+
+* 하나의 항목으로 구성된 튜플은 값 뒤에 반드시 `,`를 붙여야 한다
+  Single item : **Must add _comma(,)_**
+  * 쉼표가 붙지 않으면 튜플 인식 X
+  * Multiple items : No need (생략 가능)
 
 * Access through **index** ; tuple[i]
 
   ```python
-  >>> t = 12345, 54321, 'hello!'
-  >>> # Tuples are immutable:
-  ... t[0] = 88888
-  Traceback (most recent call last):
-    File "<stdin>", line 1, in <module>
-  TypeError: 'tuple' object does not support item assignment
-  >>> # but they can contain mutable objects:
-  ... v = ([1, 2, 3], [3, 2, 1])
-  >>> v
-  ([1, 2, 3], [3, 2, 1])
+  >>> a = 1,
+  >>> print(type(a))
+  <class 'tuple'>
   ```
 
-* Single item : **Must add _comma(,)_**
+#### Tuple Assignment 튜플 대입
 
-* Multiple items : No need
+* 우변의 값을 좌변의 변수에 한번에 할당하는 과정
 
-#### Tuple assignment 튜플 대입
+  = the process that **assigns the values on the right-hand side to the left-hand side variables** [topper](https://www.toppr.com/guides/computer-science/programming-with-python/tuples/tuple-assignment/)
 
-* the process that **assigns the values on the right-hand side to the left-hand side variables** [topper](https://www.toppr.com/guides/computer-science/programming-with-python/tuples/tuple-assignment/)
+* 보통 파이썬 내부에서 활용
 
   ```python
   a, b = 1, 2
@@ -121,27 +132,78 @@ c = {1}
 
 <br/>
 
+---
+
 ### Range 레인지
 
-* Sequence of number
+* 정수의 시퀀스를 나타내기 위해 사용
+
+  = Sequence of number
+
   * Basic : range(n)
     * **0 ~ n-1**
   * Range : range(n, m)
-    * **n ~ m**
+    * **n ~ m-1**
   * Range & Step : range(n, m, s)
     * **n ~ m-1, adding s**
 
+#### CREATE & ACCESS
+
+* `list(range(n, m))` : range를 list로 형변환
+
+  ```python
+  # 0부터 -6까지 담긴 range를 만들고 list로 형 변환하기
+  >>> print(list(range(0, -5, -1)))
+  [0, -1, -2, -3, -4, -5]
+  ```
+
 <br/>
 
-### Packing/Unpacking Operator
+---
+
+### Packing/Unpacking Operator `*`
+
+* 모든 시퀀스형은 패킹/언패킹 연산자 `*`를 사용하여 객체의 패킹 또는 언패킹이 가능
+
+#### Packing
+
+* 대입문의 좌변 변수에 위치
+
+  ```python
+  >>> a, *b = 1, 2, 3, 4
+  >>> print(a)
+  >>> print(type(a))
+  1
+  <class 'int'>
+  
+  >>> print(b)
+  >>> print(type(b))
+  [2, 3, 4]
+  <class 'list'>
+  ```
+
+  
+
+#### Unpacking
+
+* argument unpacking: when argument name starts with *
+* 패킹의 경우 리스트로 대입
+
+&& 어려움 ㅠㅠ
 
 <br/>
+
+---
 
 ---
 
 <br/>
 
 ## Associative Container 비시퀀스형 컨테이너
+
+* Set, Dictionary
+
+<br/>
 
 ### Set 셋
 
@@ -157,6 +219,8 @@ c = {1}
 * Unordered ==> CAN NOT ACCESS to a value
 
 <br/>
+
+---
 
 ### Dictionary 딕셔너리
 
