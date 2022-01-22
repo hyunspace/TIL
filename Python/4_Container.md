@@ -213,7 +213,14 @@ c = {1}
   * **순서 없이** 해시 가능한 객체(immutable)만 담음
 * Able to add/update/delete object ➡ **Mutable**
 * Same as set in math
-* **Eliminating duplicate** entries ; **중복 비허용**
+  * 함수와 마찬가지로 차집합`-` 합집합`|` 교집합`&` 연산 가능
+
+* **Eliminating duplicate** entries ; **중복 비허용!!!**
+  * Set을 활용하면 list 내 중복을 손쉽게 제거할 수 있지만, 순서를 보장할 수 없음
+
+
+#### CREATE & ACCESS
+
 * `{}` or `set()`
   * but empty set >> `set()`
 * Unordered ==> CAN NOT ACCESS to a value
@@ -232,8 +239,42 @@ c = {1}
   * Key : immutable (ex. string, integer, float, boolean, tuple, range)
   * values : any type is fine
 * sometimes found in other languages as “associative memories” or “associative arrays”
+
+#### CREATE & ACCESS
+
 * `{}` or `dict()`
+
+* 순서를 보장하지 않는다
+
+* **key** : only **immutable(변경 불가능)** data
+
+  * string, integer, float, boolean, tuple, range
+  * 중복X  => 뒤에 정의한 값으로 바뀜
+
+* Value : anything
+
+  * ex. list, dictionary is fine.
+
 * Access to values through keys (not oppositely)
+
+  ```python
+  # key 목록 확인
+  dict.keys()
+  # value를 확인
+  dict.values()
+  # key와 value 목록 확인
+  dict.items()
+  ```
+
+  ```python
+  >>> sm_artists = {'소녀시대': '윤아', '샤이니': '태민', '엑소': '백현'}
+  >>> sm_artists.keys()
+  >>> sm_artists.values()
+  >>> sm_artists.items()
+  dict_keys(['소녀시대', '샤이니', '백현'])
+  dict_values(['윤아', '태민', '백현'])
+  dict_items([('소녀시대', '윤아'), ('샤이니', '태민'), ('엑소', '백현')])
+  ```
 
 <br/>
 
@@ -241,37 +282,131 @@ c = {1}
 
 ## Typecasting 형변환
 
-### Typecasting 자료형 변환
+#### Implicit Typecasting 암시적 형변환
 
-* Implicit
+* **Python automatically** converts one data type to another data type
 
-  * **Python automatically** converts one data type to another data type
+* 사용자가 의도하지 않았지만, 파이썬 내부적으로 자동 변환
 
-* Explicit
+  * bool
 
-  * Users coverts one data type to another one on purpose
+    ```python
+    >>> True + 1
+    2
+    ```
 
-    * str*, float => int
+  * Numeric Type(int, float, complex)
 
-      ​	~~int(3.5) XX~~
+    ```pyton
+    int + float ==> float
+    int + complex ==> complex
+    ```
 
-    * str*, int => float
+    
 
-    * int, float, list, tuple, dict => str
+#### Explicit Typecasting 명시적 형변환
+
+* Users coverts one data type to another one on purpose
+
+  * string ➡ integer: 글자가 숫자일 때만 + 형식에 맞을 때만
+* integer ➡ string: 모두 가능
+  
+* int, float, list, tuple, dictionary ➡ str
+
+* 암시적 형변환이 되는 경우도 명시적 형변환 가능
+
+  * `int()` << string, float
+  * `float()` << string, int
+  * `str()` << int, float, list, tuple, dictionary
+
+  ```python
+  # string 5.6 > int ?
+  >>> int('5.6')
+  ValueError
+  
+  # string 4 > int ?
+  >>> int(4)
+  4
+  
+  # float 5.6 > int ?
+  >>> int(5.6)
+  5
+  
+  # string 5.6 > float ?
+  >>> float('5.6')
+  5.6
+  ```
 
 <br/>
 
-<br/>
-
-## Operator 연산자
-
-### Container Typecasting
+#### Container Typecasting 컨테이너형 형변환
 
 [img src](https://5-ssssseung.tistory.com/61?category=954661)
 
+* 세로에 있는 컨테이너를 가로로 변환
+
 ![https://user-images.githubusercontent.com/18046097/61180466-a6a67780-a651-11e9-8c0a-adb9e1ee04de.png](4_Container.assets/61180466-a6a67780-a651-11e9-8c0a-adb9e1ee04de.png)
 
+* example
 
+  ```python
+  # List Typecasting // Range X, Dict X
+  >>> l = [1, 2, 3, 4]
+  >>> print(str(l))
+  >>> print(tuple(l))
+  >>> print(set(l))
+  [1, 2, 3, 4]
+  (1, 2, 3, 4)
+  {1, 2, 3, 4}
+  
+  # Tuple Typecasting // Range X, Dict X
+  >>> t = (1, 2, 3, 4)
+  >>> print(str(t))
+  >>> print(list(t))
+  >>> print(set(t))
+  (1, 2, 3, 4)
+  [1, 2, 3, 4]
+  {1, 2, 3, 4}
+  
+  # Range Typecasting // Dict X
+  >>> r = range(1, 5)
+  >>> print(str(r))
+  >>> print(list(r))
+  >>> print(set(r))
+  >>> print(tuple(r))
+  range(1, 5)
+  [1, 2, 3, 4]
+  {1, 2, 3, 4}
+  (1, 2, 3, 4)
+  
+  # Set Typecasting // Range X, Dict X
+  >>> s = {1, 2, 3, 4}
+  >>> str(s)
+  >>> list(s)
+  >>> tuple(s)
+  {1, 2, 3, 4} # set 모양 그대로 string이 되어 나옴
+  [1, 2, 3, 4]
+  (1, 2, 3, 4)
+  
+  # Dictionary Typecasting // Range X
+  >>> d = {'name': 'Jen', 'year': 2022}
+  >>> print(str(d)) 
+  >>> print(list(d)) 
+  >>> print(tuple(d))
+  >>> print(set(d))
+  {'name': 'Jen', 'year': 2022}
+  ['name', 'year']
+  ('name', 'year')
+  {'year', 'name'}
+  ```
+
+
+
+### REVIEW
+
+
+
+## Operator 연산자
 
 ### Types of Operator in Python
 
