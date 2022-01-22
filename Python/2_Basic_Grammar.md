@@ -123,7 +123,7 @@
     * True, False, None, if, elif, else, is, in, except, finally, not, or, and, pass, return, try, while, with, yield, for, as, assert, async, await, break, continue, from, for, global, def, del, lambda, nonlocal, import
     
     * ```python
-      import keyworkd  #you can see all keywords in Pyton
+      import keyword  #you can see all keywords in Pyton
       print(keyword.kwlist)
       ```
     

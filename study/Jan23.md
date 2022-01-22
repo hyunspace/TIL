@@ -23,3 +23,15 @@ data 오류 질문
 'b' and 'a' 논리연산자 왜??
 
 위에 거랑 무슨 차이..?
+
+
+
+dictionary 생성 방법 두가지 
+
+dict() >> 왜 오류가 나지
+
+```python
+a = dict('김':25, '이':26, '박':24)
+SyntaxError
+```
+
