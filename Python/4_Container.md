@@ -251,6 +251,20 @@ c = {1}
 
 * `{}` or `dict()`
 
+  ```python
+  {key: value}
+  dic(key=value) key값 '' 씌우지 않는다
+  ```
+
+  ```python
+  def func(**kwargs):
+    pass
+  
+  func('이건': '안되겠죠') ??? 다시 보기
+  ```
+
+  
+
 * 순서를 보장하지 않는다
 
 * **key** : only **immutable(변경 불가능)** data
@@ -265,12 +279,15 @@ c = {1}
 * Access to values through keys (not oppositely)
 
   ```python
-  # key 목록 확인
+  # 전체 key 목록 확인
   dict.keys()
-  # value를 확인
+  # 모든 value를 확인
   dict.values()
   # key와 value 목록 확인
   dict.items()
+  # 내가 원하는 특정 key의 value 확인
+  dict['specific_key'] >> 해당 key 없을 때 KeyError 발생
+  dict.get('specific_key') >> 해당 key 없을 때 None 반환
   ```
 
   ```python

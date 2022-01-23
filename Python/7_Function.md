@@ -156,3 +156,13 @@ print(a)
 <br/>
 
 ### Lifecycle 변수 수명주기
+
+
+
+
+
+
+
+
+
+return 안하면 print해도 저장값은 None!!!
