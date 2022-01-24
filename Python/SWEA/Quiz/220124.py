@@ -50,16 +50,52 @@
 
 ## 6222
 
-alpha = input()
+# alpha = input()
 
-if alpha.isupper == True:
-    asc1 = ord(alpha)
-    asc2 = ord(alpha) + 32
-    asc3 = chr(asc2)
-    print(f'{alpha}(ASCII: {asc1}) => {asc3}(ASCII: {asc2})')
-else:
-    asc1 = ord(alpha)
-    asc2 = ord(alpha) - 32
-    asc3 = chr(asc2)
-    print(f'{alpha}(ASCII: {asc1}) => {asc3}(ASCII: {asc2})')
+# if alpha.isupper == True:
+#     asc1 = ord(alpha)
+#     asc2 = ord(alpha) + 32
+#     asc3 = chr(asc2)
+#     print(f'{alpha}(ASCII: {asc1}) => {asc3}(ASCII: {asc2})')
+# else:
+#     asc1 = ord(alpha)
+#     asc2 = ord(alpha) - 32
+#     asc3 = chr(asc2)
+#     print(f'{alpha}(ASCII: {asc1}) => {asc3}(ASCII: {asc2})')
 
+
+## 6226
+
+# for i in range(1, 201):
+#     if i % 7 == 0:
+#         if i % 5 != 0:
+#             num = str(i) + ','
+#             print(num, end='')
+
+
+## 6227
+
+# def all_even(numbers):
+#     for number in (100, numbers+1):
+#         # for num in number:
+#         #     # 숫자는 not iterable 
+#         #     if num % 2 == 0:
+#         #         print(num, end=' ')
+#         # 각 자리수를 나누어서 찾아보자
+#         if number >= 10:
+#             remainder = number % 10 
+#             number = number // 10
+#             if remainder % 2 == 0:
+#                 return all_even(numbers) + remainder
+
+# print(all_even(300))
+
+for number in (100, 301):
+    while number < 301:
+        remainder = number % 10
+        number = number // 10
+        if remainder % 2 == 0:
+            remainder = number % 10
+            number = number // 10
+            if remainder % 2 == 0:
+                print(number)
