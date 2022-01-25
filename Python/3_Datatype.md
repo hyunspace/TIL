@@ -123,7 +123,7 @@
 
 ### String Type
 
-**IMMUTABLE, ORDERED, ITERABLE**
+**IMMUTABLE, ORDERED, ITERABLE(순회가능)**
 
 * sequences of **character data**
 
@@ -247,4 +247,3 @@
       ```
     
       가로가 2.12, 세로가 4.35일 때 사각형의 넓이는 9.24
-  

@@ -60,6 +60,7 @@ c = {1}
 #### CREATE & ACCESS
 
 * `[]` or `list()`
+
 * `list_name[index]`
 
 * Access through **index** ; list[0]
@@ -83,6 +84,12 @@ c = {1}
   apple
 
   p << 'p'each
+  
+* 리스트 + 리스트
+
+  * ex_list.append(i)
+  * ex_list += [i]
+
 
 
 
@@ -260,7 +267,7 @@ c = {1}
   def func(**kwargs):
     pass
   
-  func('이건': '안되겠죠') ??? 다시 보기
+  func('이건': '안되겠죠') ??? 다시 보기 
   ```
 
   
