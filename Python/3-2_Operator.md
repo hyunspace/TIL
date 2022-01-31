@@ -71,8 +71,12 @@
 
   = When the return value is clear, do not check the second value.
 
+  * A(False) and B(True) => B 확인 없이 바로 False => A 반환
+  * A(True) or B(False) => B 확인 없이 바로 True => A 반환
+  
   ```python
   vowels = 'aeiou'
+  
   'a' and 'b' in vowels
   >> False # ('a') and ('b') in vowels
   
@@ -91,7 +95,7 @@
   print(b)
   >> 5
   ```
-
+  
   ```python
   c = 0 and 1
   # if one value returns False, and returns False if the second one returns True.
@@ -106,14 +110,14 @@
   ```
   
 
-
+<br/>
 
 <br/>
 
 ## In-Place Operator 복합 연산자
 
 *  an operation that changes directly the content of a given linear algebra, vector, matrices(Tensor) without making a copy
-*  연산과 할당이 함께 이뤄짐
+*  연산과 대입(할당)이 함께 이뤄짐
 *  반복문을 통해 갯수를 카운트 할 때 자주 사용
    *  a += b 
    *  a -= b
@@ -206,15 +210,15 @@
 
 <br/>
 
-## Indexing/Slicing 인덱싱/슬라이싱
+## Indexing/Slicing 인덱싱/슬라이싱/etc
 
 * `[]`을 통해 값에 접근하고, `[:]`을 이용해 슬라이싱 ~!
 
-
+<br/>
 
 ### Indexing 인덱싱
 
-* Access to a specific index in a sequence
+* Access to a specific index in a sequence 시퀀스의 특정 인덱스 값에 접근
 
   *  IndexError: 해당 인덱스가 없는 경우
 
@@ -240,17 +244,18 @@
   'h'
   ```
 
-  
 
 <br/>
 
 ### Slicing 슬라이싱
 
-* Slice a sequence in k
+* 시퀀스를 특정 단위로 슬라이싱
 
-* `[n:m]` : **n ~ m-1**
+  * `[n:m]` : **n ~ m-1**
 
-* `[n:m:s]` : **n ~ m-1, step s**
+* 시퀀스를 k 간격으로 슬라이싱
+
+  * `[n:m:s]` : **n ~ m-1, step s**
 
   * String slicing example:
 
@@ -270,6 +275,15 @@
 * `s[::] ` : **from the beginning to the end**
 
 * `s[::-1]` : **from the end to the beginning** (backward)
+
+<br/>
+
+### set operator
+
+* `|` : 합집합
+* `&` : 교집합
+* `-` : 여집합
+* `^` : 대칭차
 
 <br/>
 
@@ -310,12 +324,15 @@
 * `or`
 
   ![이미지](5_Operator.assets/unknown.png)
-
-
-
-### set operator
-
-* `|` : 합집합
-* `&` : 교집합
-* `-` : 여집합
-* `^` : 대칭차
+  
+  * Example
+  
+    ```python
+    'abc'[0] in 'apple' and -3**3*0 > 4 % 2
+    # ('a'in 'apple') and (-3**3)*0 > (4 % 2)
+    #                             0 > 0
+    #      True                   False
+    >>> False
+    ```
+  
+    
