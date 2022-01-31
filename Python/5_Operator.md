@@ -19,7 +19,7 @@
 ![img](5_Operator.assets/python-arithmetic-operators.png)
 
 * `//` 몫
-* `%` 나머지
+* `%` 나머지 [모듈로]
 
 #### divmod 함수
 
@@ -72,33 +72,41 @@
   = When the return value is clear, do not check the second value.
 
   ```python
+  vowels = 'aeiou'
+  'a' and 'b' in vowels
+  >> False # ('a') and ('b') in vowels
+  
+  'b' and 'a' in vowels
+  >> True # ('b') and ('a' in vowels)
+  ```
+  
+  ```python
   a = 2 and 4 # and requires all True => need to check 4
   print(a) 
+  >> 4
   ```
-
+  
   ```python
   b = 7 or 8 # or requires one True => stop evaluate at 7
   print(b)
+  >> 5
   ```
 
   ```python
   c = 0 and 1
   # if one value returns False, and returns False if the second one returns True.
   print(c)
+  >> 0
   ```
-
+  
   ```python
   d = 4 or 2 # or doesn't care how many False it has. One True returns True for the others.
   print(d)
+  >> 5
   ```
+  
 
-  ```python
-  [출력]
-  4
-  5
-  0
-  5
-  ```
+
 
 <br/>
 
@@ -270,6 +278,16 @@
 ## 연산자 우선 순위
 
 * `()`
+
+  ```python
+  vowels = 'aeiou'
+  
+  'a' and 'b' in vowels
+  >> False # ('a') and ('b') in vowels
+  
+  'b' and 'a' in vowels
+  >> True # ('b') and ('a' in vowels)
+  ```
 
 * Slicing
 

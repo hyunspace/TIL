@@ -1,23 +1,8 @@
-```python
-# 1을 값으로 갖는 튜플 a를 생성하시오. >> `,`
-a = (1,)
-b = [1]
-c = {1}
-```
-
-
-
-
-
 # Container
 
-#### IMMUTABLE
+![ABC of Collections in Python. Python is a very fascinating language… | by  Sanyam Arya | Medium](4_Container.assets/1W3GIPn4ge7t7xAG7OOglSA.png)
 
-* String, Tuple, Range
-
-#### MUTABLE
-
-* List, Set, Dictionary
+[img src](https://medium.com/@er.sanyam.arya/abc-of-collections-in-python-f239d787a43e)
 
 
 
@@ -33,9 +18,6 @@ c = {1}
 
 [ResearchGate](https://www.researchgate.net/figure/A-summary-of-Pythons-different-container-aspects_fig3_301637361)
 
-* Ordered vs Unordered
-* Ordered != Sorted
-
 <br/>
 
 <br/>
@@ -50,48 +32,48 @@ c = {1}
 
 ### List 리스트
 
-**MUTABLE, ORDERED, ITERABLE**
+**MUTABLE(가변형), ORDERED(순서O), ITERABLE(순회 가능)**
 
 * which can be written as **a list of comma-separated values (items) between square brackets**. Lists might contain items of different types, but usually the items all have the same type. [docs.python.org](https://docs.python.org/3/tutorial/introduction.html)
 * Indexes start from 0
 * **Mutable** ; 생성 이후 내용 변경 가능
-* ALWAYS between `[]`
+* ALWAYS between `[]` `대괄호`
 
 #### CREATE & ACCESS
 
 * `[]` or `list()`
 
-* `list_name[index]`
+* 값에 대한 접근: `list_name[index]`
+
+  ![Python Basic Syntax - list(1) - Data Science | DSChloe](4_Container.assets/python-list-index-16436320725865.png)
+
+  * [img src](https://dschloe.github.io/python/basic/basic_syntax_list_1/)
 
 * Access through **index** ; list[0]
 
   ```python
+  
   fruit = ['apple', 'peach', 'strawberry']
   fruit[0]
   fruit[-1]
+  
+  >>> apple
+  >>> strawberry
   ```
-
-  apple
-
-  strawberry
 
   ```python
   bias = ['music', 'film', ['apple', 'peach', 'strawberry']]
   bias[2][1]
   bias[-1][1][0]
+  
+  >>> apple
+  >>> p   # 'p'each
   ```
 
-  apple
-
-  p << 'p'each
-  
 * 리스트 + 리스트
 
-  * ex_list.append(i)
-  * ex_list += [i]
-
-
-
+  * ex_list`.append(i)`
+  * ex_list `+= [i]`
 
 <br/>
 
@@ -105,15 +87,24 @@ c = {1}
 * (value1, value2)
 * 리스트`[]`와 유사, but `()`
 * Starts from 0
-* ALWAYS between `()`
+* ALWAYS between `()` `소괄호`
 
 #### CREATE & ACCESS
 
 * 하나의 항목으로 구성된 튜플은 값 뒤에 반드시 `,`를 붙여야 한다
   Single item : **Must add _comma(,)_**
+  
   * 쉼표가 붙지 않으면 튜플 인식 X
-  * Multiple items : No need (생략 가능)
 
+  * Multiple items : No need (생략 가능)
+  
+    ```python
+    # 1을 값으로 갖는 튜플 a를 생성하시오. >> `,`
+    a = (1,) #(1) => int
+    b = [1] #리스트
+    c = {1} #셋
+    ```
+  
 * Access through **index** ; tuple[i]
 
   ```python
@@ -143,15 +134,15 @@ c = {1}
 
 ### Range 레인지
 
-* 정수의 시퀀스를 나타내기 위해 사용
+* 숫자(정수)의 시퀀스를 나타내기 위해 사용
 
   = Sequence of number
 
-  * Basic : range(n)
+  * 기본형: range(n)
     * **0 ~ n-1**
-  * Range : range(n, m)
+  * 범위 지정: range(n, m)
     * **n ~ m-1**
-  * Range & Step : range(n, m, s)
+  * 범위 및 스텝 지정: range(n, m, s)
     * **n ~ m-1, adding s**
 
 #### CREATE & ACCESS
@@ -189,12 +180,11 @@ c = {1}
   <class 'list'>
   ```
 
-  
 
 #### Unpacking
 
 * argument unpacking: when argument name starts with *
-* 패킹의 경우 리스트로 대입
+* `*` 패킹의 경우 리스트로 대입, `*` 언패킹의 경우 튜플로 대입
 
 && 어려움 ㅠㅠ
 
@@ -209,6 +199,7 @@ c = {1}
 ## Associative Container 비시퀀스형 컨테이너
 
 * Set, Dictionary
+* 순서가 없다 => 인덱스로 값에 접근할 수 없다!!!!!!!!!
 
 <br/>
 
@@ -218,9 +209,9 @@ c = {1}
 
 * **An unordered collection with no duplicate elements**
   * **순서 없이** 해시 가능한 객체(immutable)만 담음
-* Able to add/update/delete object ➡ **Mutable**
+* Able to add/update/delete object ➡ **Mutable / 가변 자료형**
 * Same as set in math
-  * 함수와 마찬가지로 차집합`-` 합집합`|` 교집합`&` 연산 가능
+  * 함수와 마찬가지로 차집합`-` 합집합`|` 교집합`&` 연산 가능!
 
 * **Eliminating duplicate** entries ; **중복 비허용!!!**
   * Set을 활용하면 list 내 중복을 손쉽게 제거할 수 있지만, 순서를 보장할 수 없음
@@ -247,11 +238,16 @@ c = {1}
 
 **MUTABLE, UNORDERED, ITERABLE**
 
-* An unordered collection **indexed by keys**
+* An unordered collection **indexed by keys** / 순서 X `key-value` 쌍으로 이루어진 객체
   * **A SET OF KEY: VALUE PAIRS**
 * Unlike sequences, which are indexed by a range of numbers, **dictionaries are indexed by *keys*, which can be any immutable type;** strings and numbers can always be keys.
-  * Key : immutable (ex. string, integer, float, boolean, tuple, range)
-  * values : any type is fine
+  * **key** : only **immutable(변경 불가능)** data
+    * string, integer, float, boolean, tuple, range
+    * 중복X  => 뒤에 정의한 값으로 바뀜
+  * Value : anything
+
+    * ex. list, dictionary is fine.
+
 * sometimes found in other languages as “associative memories” or “associative arrays”
 
 #### CREATE & ACCESS
@@ -270,18 +266,7 @@ c = {1}
   func('이건': '안되겠죠') ??? 다시 보기 
   ```
 
-  
-
 * 순서를 보장하지 않는다
-
-* **key** : only **immutable(변경 불가능)** data
-
-  * string, integer, float, boolean, tuple, range
-  * 중복X  => 뒤에 정의한 값으로 바뀜
-
-* Value : anything
-
-  * ex. list, dictionary is fine.
 
 * Access to values through keys (not oppositely)
 
@@ -333,23 +318,29 @@ c = {1}
     int + complex ==> complex
     ```
 
-    
+
+<br/>
 
 #### Explicit Typecasting 명시적 형변환
 
 * Users coverts one data type to another one on purpose
 
-  * string ➡ integer: 글자가 숫자일 때만 + 형식에 맞을 때만
-* integer ➡ string: 모두 가능
-  
-* int, float, list, tuple, dictionary ➡ str
-
 * 암시적 형변환이 되는 경우도 명시적 형변환 가능
 
-  * `int()` << string, float
-  * `float()` << string, int
-  * `str()` << int, float, list, tuple, dictionary
+  * `int()` 
+  
+    * str*, float ➡ int
 
+  * `float()` 
+  
+    * str*, int ➡ float
+  
+  * `str()`
+  
+    * int, float, list, tuple, dict ➡ str
+  
+    `*` : 형식에 맞는 문자열만 가능
+  
   ```python
   # string 5.6 > int ?
   >>> int('5.6')
@@ -374,7 +365,7 @@ c = {1}
 
 [img src](https://5-ssssseung.tistory.com/61?category=954661)
 
-* 세로에 있는 컨테이너를 가로로 변환
+* ㅋ세로에 있는 컨테이너를 가로로 변환
 
 ![https://user-images.githubusercontent.com/18046097/61180466-a6a67780-a651-11e9-8c0a-adb9e1ee04de.png](4_Container.assets/61180466-a6a67780-a651-11e9-8c0a-adb9e1ee04de.png)
 

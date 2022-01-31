@@ -2,23 +2,27 @@
 
 ![img](3_Datatype.assets/12.jpg)
 
+* Bloolean Type
+* Numeric Type - Int/Float/Compex
+* String Type
+
 <br/>
 
 <br/>
 
 ## None
 
-*  `NoneType` is the type for the `None` object, which is an object that indicates __*no value*__. `None` is the return value of functions that "don't return anything".  [Stack Overflower](https://stackoverflow.com/questions/21095654/what-is-a-nonetype-object)
+*  `NoneType` is the type for the `None` object, which is an object that indicates __*no value(값이 없음!)*__. `None` is the return value of **functions that "don't return anything"**.  [Stack Overflower](https://stackoverflow.com/questions/21095654/what-is-a-nonetype-object)
 
   ```python
   print(type(None))
   a = None
   print(type(a))
+  
+  >>> <Class 'NoneType'>
+  >>> <Class 'NoneType'>
   ```
   
-  <Class 'NoneType'>
-  
-  <Class 'NoneType'>
 
 <br/>
 
@@ -28,17 +32,16 @@
 
 * True / False
 
-* 0, 0.0, ( ), [], {}, '', None ➡ False
+* `0`, `0.0`, `( )`, `[]`, `{}`, `' '`, `None` ➡ False
 
-  * something empty reutrns False
+  * something **empty reutrns False**
 
     ```python
     bool([0])
+    
+    >>> True
     ```
-
-    True
-
-
+    
 
 <br/>
 
@@ -54,19 +57,28 @@
 
 * The type of every integer is **int**
   * no long type, just int
-* There's **no overflow** (산술 오버플로우)
+  
+* There's **no overflow** (매우 큰 수를 나타낼 때에도 오버플로우 발생 X)
   * overflow : over the memory which a data type can use
 
 * Notation expression
   * binary number : 0b
+  
   * octal number : 0o
+  
   * hexadecimal : 0x 
+  
+    ```python
+    0b10 >>> 2
+    0o30 >>> 24
+    0x10 >>> 16
+    ```
 
 <br/>
 
 ### Float 실수
 
-* Every number excep integer is **float**
+* Every number excep integer is **float**  / 정수가 아닌 모든 실수!
 * **floating point** (부동소수점)
   * Computers express float by binary beats. And it leads to floating point rounding error.
 
@@ -92,19 +104,27 @@
   ```python
   # 1. a tiny value
   abs(num1 - num2) <= 1e-10
+  
+  >>> True
   ```
-
-  True
 
   ```python
   # 2. machine epslion
+  import sys
+  print(abs(a - b) <= sys.float_info.epsilon)
+  print(sys.float_info.epsilon)
   
+  >>> True
+  >>> 2.220446049250313e-16
+  ```
+  
+  ```python
   # 3. math.isclose(a, b)
   import math
   math.isclose(num1, num2)
+  
+  >>> True
   ```
-
-<br/>
 
 <br/>
 
@@ -119,15 +139,17 @@
 
 <br/>
 
+<br/>
+
 ## String Type 문자열
 
-### String Type
+**IMMUTABLE(변경 불가능), ORDERED, ITERABLE(순회가능)**
 
-**IMMUTABLE, ORDERED, ITERABLE(순회가능)**
+* 모든 문자는 str 타입
 
 * sequences of **character data**
 
-* String literals may be delimited using either single('') or double quotes(""). [Real Python](https://realpython.com/python-data-types/#strings)
+* String literals may be delimited using either single(`''`) or double quotes(`""`). [Real Python](https://realpython.com/python-data-types/#strings)
 
   ```python
   print('Jen, "Hi"')
@@ -159,14 +181,14 @@
 
 <br/>
 
-#### Triple Quotes 삼중따옴표
+### Triple Quotes 삼중따옴표
 
 * Quotes in quotes
 * Multiline strings
 
 <br/>
 
-#### Escape Sequence `\`
+### Escape Sequence `\`
 
 * When make Python interpret a charater or sequence of characters within a string differently
 
@@ -192,8 +214,6 @@
   print((('*' * n) + '\n') * m)
   ```
   
-
-<br/>
 
 <br/>
 
