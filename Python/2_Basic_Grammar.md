@@ -1,33 +1,29 @@
 # Python Basic Grammar
 
-## Code Style Guide
+## Basic Grammar
+
+### Code style Guide
 
 * PEP8 https://www.python.org/dev/peps/pep-0008/
 * Google Style guide https://google.github.io/styleguide/pyguide.html
 
+<br/>
 
-
-
-
-### Identation
+### 들여쓰기(Identation)
 
 * Space sensitive >> space key * 4 or 1 tab
 
+<br/>
 
+---
 
+<br/>
 
-
-
-
-
-
-## 변수(Variable)
+### 변수(Variable)
 
 **How to Assign** / **How to Name**
 
-### `=` assign (same X)
-
-### Variable
+#### `=` assign (same X) `할당하다`
 
 * A name used to refer an object in your computer memory
 
@@ -44,19 +40,32 @@
 
 * Variable is assigned with `=` (assignment operator)
 
+  * 실습 문제: 각각 값을 바꿔서 저장하는 코드 작성하기
 
+    ```python
+    x = 10, y = 20
+    
+    temp = x # 임시변수 temp에 x를 담아두고
+    x = y # y를 x에 담기
+    y = temp # 다시 temp를 y에 담으면 (컵 속 물 옮기기 상상하기)
+    print(x, y)
+    >>> 20 10
+    ```
 
+    ```python
+    x, y = 10, 20
+    y, x = x, y
+    print(x, y)
+    >>> 20 10
+    ```
 
+<br/>
 
-### type()
+#### type()
 
 * Type of the assigned value
 
-
-
-
-
-### id()
+#### id()
 
 * Identity value of the assigned object.
 
@@ -73,12 +82,7 @@
   2
   ```
 
-
-
-
-
-
-### assignment
+#### assignment
 
 * one value several variables
 
@@ -98,15 +102,13 @@
 
   1 2
 
+<br/>
 
+---
 
+<br/>
 
-
-
-
-
-
-## 식별자(Identifiers)
+### 식별자(Identifiers)
 
 * How to name variables?
 
@@ -129,17 +131,15 @@
     
   * Do not use **Built in function내장함수** or **Module**
 
+<br/>
 
+---
 
+<br/>
 
+### 사용자 입력 input
 
-
-
-
-
-## 사용자 입력 input
-
-### input([prompt])
+#### input([prompt])
 
 * Built in function
 
@@ -162,15 +162,9 @@
 
   str
 
+<br/>
 
-
-
-
-
-
-
-
-## 주석 Comment
+### 주석 Comment
 
 * One line comment
   * put `#` at the front
@@ -179,8 +173,6 @@
   * use `"""` or `'''`
   * `ctrl + /`
 * Docstring
-
-
 
 
 
