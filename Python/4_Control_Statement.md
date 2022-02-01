@@ -213,7 +213,6 @@ for idx in range(len(chars)):
    >>> 2
    ```
   
-
 * Methods
 
   * `.key()`: keys
@@ -250,7 +249,7 @@ for idx in range(len(chars)):
   ```
 
   ```python
-  # itmes
+  # items
   for key, value in menus.items():
       # key, value = ('신전떡볶이', '매운치즈김밥')
       print(key, value)
@@ -268,7 +267,8 @@ for idx in range(len(chars)):
   : 인덱스와 객체를 쌍으로 담은 열거형(enumerate) 객체 반환 = Return an enumerate object.
 
   * (index, value) 형태의 tuple로 구성
-
+  * type(enumerate()) ➡ <class 'enumerate'>
+  
   ```python
   menus = {'신전떡볶이': ['매운치즈김밥', '로제치즈떡볶이'], '불스떡볶이': ['페퍼로니떡볶이', '꿀구마추가']}
   print(enumerate(menus))
@@ -290,6 +290,11 @@ for idx in range(len(chars)):
 * 표현식과 제어문을 통해 특정한 값을 가진 리스트를 간결하게 생성하는 방법
 
   : A compact way to process all or part of the elements in a sequence and return a list with the results.
+
+  ``` python
+  [expression for 변수 in iterable]
+  list(expression for 변수 in iterable)
+  ```
 
 * example
 
