@@ -184,9 +184,40 @@
 #### Unpacking
 
 * argument unpacking: when argument name starts with *
+
 * `*` 패킹의 경우 리스트로 대입, `*` 언패킹의 경우 튜플로 대입
 
-&& 어려움 ㅠㅠ
+  ```python
+  def multipy(a, b, c):
+      return a * b * c
+  
+  numbers = [1, 2, 3]
+  print(multipy(*numbers))
+  print(multipy(numbers)) # => TypeError: argument 여러개 넣어야 하는데 1개만 넣었기 때문
+  ```
+
+#### Caution
+
+* `*`이 패킹/언패킹 연산자인지 산술 연산자(곱셈)인지 구분해야 함
+
+  * 패킹/언패킹
+
+    ```python
+    # 1. 연산자가 대입식의 좌측에 위치
+    x, *y = 1, 2, 3
+    print(x, y)
+    >>> 1 [2, 3]
+    
+    # 2. 연산자가 단항연산자(하나의 항을 대상으로 연산)로 사용
+    ```
+
+  * 산술 연산자(곱셈)
+
+    ```python
+    # 1. 연산자가 이항연산자(두 개 항을 대상으로 연산)로 사용
+    ```
+
+<br/>
 
 <br/>
 
@@ -350,13 +381,13 @@
   >>> int('5.6')
   ValueError
   
-  # string 4 > int ?
-  >>> int(4)
-  4
-  
   # float 5.6 > int ?
   >>> int(5.6)
   5
+  
+  # string 4 > int ?
+  >>> int(4)
+  4
   
   # string 5.6 > float ?
   >>> float('5.6')
