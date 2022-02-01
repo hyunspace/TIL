@@ -256,7 +256,11 @@
 
   ```python
   {key: value}
-  dic(key=value) key값 '' 씌우지 않는다
+  dict(key=value) key값 '' 씌우지 않는다
+  ```
+
+  ```python
+  dict_name[key] = value # 새로운 값 넣을 때!
   ```
 
   ```python
