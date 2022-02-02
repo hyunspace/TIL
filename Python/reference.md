@@ -14,3 +14,12 @@
 
 * [continue flow chart](https://www.guru99.com/python-break-continue-pass.html)
 * [break flow chart](https://www.guru99.com/python-break-continue-pass.html)
+
+
+
+
+
+5_
+
+* [function definition](https://www.fireblazeaischool.in/blogs/functions-in-python/)
+* [parameters & arguments](https://velog.io/@dooyeonk/Python-Function-Parameters)
