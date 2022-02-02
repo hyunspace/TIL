@@ -1,5 +1,3 @@
-
-
 # Function 함수
 
 1. Basic of function
@@ -7,7 +5,9 @@
 3. Input
 4. Scope
 5. Doc-string
-6. Applications
+6. Applications(map, filter, zip, ...)
+
+<img src="5_Function.assets/blog-01.jpg" alt="PYTHON DIARIES CHAPTER 4 → FUNCTION PART - 1 - HackerEarth Blog" style="zoom:40%;" />
 
 <br/>
 
@@ -228,8 +228,6 @@ print(a, b) # 가장 바깥에 있으므로 global => 0 1
 
 * Example
 
-  * 
-
   ```python
   number = [1, 2, 3, 4]
   
@@ -241,43 +239,208 @@ print(a, b) # 가장 바깥에 있으므로 global => 0 1
   new()
   print(numbers)
   ```
+  
 
-  * replace
+### global
 
-    ```python
-    word = 'hello' # string is IMMUTABLE
-    
-    def new():
-        word.replace('h', '')
-        # replace를 써도 string 규칙 안 깨짐
-        # 문자열을 바꾼 게 아니라, h를 뺀 ello를 return 해준 것 뿐
-        a = word.replace('h', '')
-        # return 값을 a에 담아두자
-        print(word) # immutable하므로 그대로
-        print(a)
-    
-    new()
-    print(word)
-    ```
+* 밖에 있는 global의 값을 가져와서 **변경**하고 싶을 때
+* global 키워드는 먼저(사용하기 전에) 선언 해야 함
 
-    hello
+### nonlocal
 
-    ello
+* local도 아니고 global도 아니고 (enclosed)
 
-    hello
+<br>
 
+### 주의 사항
 
+* 기본적으로 함수에서 선언된 변수 => Local scope => 함수 종료 시 사라짐
+* 해당 scope에 없는 변수를 쓴다? => LEGB rule에 의해 이름을 검색
+  * 접근은 가능하지만 변수 수정은 X (=> 그래서 global, nonlocal 등장)
+  * 함수 내에서 필요한 상위 scope의 변수는 argument로 넘겨서 활용
+* 상위 scope에 있는 변수를 수정하고 싶다? => global, nonlocal 키워드 활용
+  * 코드가 복잡해짐 => 오류 발생 가능성 높아지므로 비추
+  * 함수로 값을 바꾸고 싶다면 argument로 넘기고 리턴 값을 사용하는 것을 추천(굳이 위의 값을 끌어와서 변경하지 말아라)
 
 <br/>
 
-### Lifecycle 변수 수명주기
+<br/>
 
+## Doc-String 함수의 문서화
 
+* 함수나 클래스를 설명
 
+  <img src="5_Function.assets/image-20220203001131048.png" alt="image-20220203001131048" style="zoom:80%;" />
 
+#### Naming Convention
 
+* 규칙
+  * 상수 이름 : 영어 전체 대문자 (ex. PI = 3.141592)
+  * 클래스 및 예외의 이름: 각 단어의 첫 글자만 영문 대문자
+  * 그 외 : 소문자 또는 밑줄로 구분한 소문자 (ex. 함수들...)
 
+* 함수 이름으로 기능, 역할, 반환 값 등을 알 수 있도록 직관적으로!
+* 약어(줄임말) 사용 지양
 
+<br/>
 
+<br/>
 
-return 안하면 print해도 저장값은 None!!!
+---
+
+---
+
+<br/>
+
+## 함수 응용
+
+### map(function, iterable)
+
+* 순회 가능한 데이터구조(iterable) 내 **각각의 요소에 함수(function) 적용**하고, 그 결과를 map object로 반환
+
+  => list로 형변환하여 결과를 직접 확인할 수 있음
+
+* 활용 사례
+
+  * 알고리즘 문제 풀이시 input 값을 바로 숫자로 형변환 하고 싶을 때
+
+  * .split 과 함께 설명
+
+    ```python
+    # input에 두 개의 값 20 20을 넣으려고 하는 상황
+    input_value = input()
+    >>> '20 20'
+    input_value.split()
+    ['20', '20']
+    ```
+
+    ```python
+    a = input().split()
+    >>> 20 20
+    
+    print(map(int, a))
+    >>> <map object at 0x000002A866D06DF0>
+    # a의 값이 얼마나 클 지 모르니까(순환 가능한거니까, 얼마나 많이 들어있을지 모름) 통에 담아서 통 째로 전달하는 것. 만약 각각을 보고 싶다면 리스트로 형변환해서 하나씩 보는 것
+    
+    print(list(map(int, a)))
+    >>> [20, 20]
+    
+    # 하나로 묶어 보자
+    n, m = map(int, input().split())
+    print(n, m, type(n), type(m))
+    >>> 20 20 <class 'int'> <class 'int'>
+    # n과 m이라는 변수를 지정해줬기 때문에 통으로 전달하지 않고 해당 변수에 각각 담아서 값을 바로 보여줌
+    ```
+
+<br/>
+
+### filter(function, iterable)
+
+* 순회 가능한 데이터구조(iterable)의 모든 요소에 함수(function)을 적용하고, 그 결과가 True인 것들만 filter object로 반환
+
+<br/>
+
+### zip
+
+* 복수의 iterable을 모아 튜플을 원소로 하는 zip object를 반환
+
+  ```python
+  dcs = ['batman', 'flash', 'wonder_woman']
+  mavels = ['ironman', 'quicksilver', 'captain_marvel']
+  pair = zip(dcs, mavels)
+  print(pair, type(pair))
+  
+  >>> <zip object at 0x000001615A407100> <class 'zip'>
+  ```
+
+  ```python
+  print(list(pair))
+  
+  >>> [('batman', 'ironman'), ('flash', 'quicksilver'), ('wonder_woman', 'captain_marvel')]
+  ```
+
+<br/>
+
+### lambda[parameter] : expression
+
+* 표현식을 계산한 결과값을 반환하는 함수
+
+* 이름이 없어서 익명함수라고도 불림
+
+* return문 X, 간편 조건문 외의 복잡한 조건 XXX
+
+  ```python
+  # 사각형의 넓이를 구하는 공식 - def
+  def rectangle_area(w, h):
+      return w * h
+  print(rectangle_area(5, 6))
+  >>> 30
+  ```
+
+  ```python
+  # 사각형의 넓이를 구하는 공식 - lambda
+  rectangle_area = lambda w, h : w * h
+  rectangle_area(5, 6)
+  >>> 30
+  ```
+
+* filter + lambda
+
+  ```python
+  # 기존의 식
+  def odd(n):
+      return n % 2 # 홀수라면 1(True), 짝수라면 0(False) 반환
+  
+  print(list(filter(odd, range(5))))
+  >>> [1, 3]
+  ```
+
+  ```python
+  # lambda 활용
+  #                       n을 넣으면 n % 2의 값을 반환해줘
+  print(list(filter(lambda n: n % 2, range(5))))
+  >>> [1, 3]
+  ```
+
+<br/>
+
+### 재귀 함수(Recursive function)
+
+* 자기 자신을 호출하는 함수
+
+* 1개 이상의 종료되는 상황(base case)이 존재하고, 수렴하도록 작성한다
+
+* 알고리즘 설계 및 구현에서 유용하게 활용
+
+  * 변수의 사용이 줄어들고 코드의 가독성이 높아짐 => 반복문 대신 사용하기도 함
+
+* example
+
+  * n! (factorial)
+
+    ```python
+    def factorial(n):
+        if n == 0 or n == 1:
+            return 1
+        else:
+            return n * factorial(n-1)
+    factorial(4)
+    # n==4 이므로 else => 4 * factorial(3)
+    # n==3 => factorial(3) = 3 * factorial(2)
+    # n==2 => factorial(2) = 2 * factorial(1)
+    # n==1 => return 1
+    # ==> 다 연결하면 4 * (3 * (2 * (1)))
+    ```
+
+#### 주의사항
+
+* base case에 도달할때까지 함수를 호출
+
+  => 메모리 스택이 넘치게 되면(stack overflow) 프로그램이 동작X
+
+* 파이썬에서는 최대 재귀 깊이가 1,000번으로 제한. 넘어가면 Recursion Error 발생
+
+  * 추가 설정으로 변경 가능
+
+* 입력 값이 커질 수록 연산 속도가 오래 걸림
+
