@@ -1,3 +1,5 @@
+
+
 # Function 함수
 
 1. Basic of function
@@ -118,13 +120,28 @@ def function_name(parameter):
 
 <br/>
 
-### Positional Arguments Packing/Unpacking
+### Default Arguments Values (Def)
 
-#### *
+* 기본값을 지정하여 함수 호출 시 argument 값 설정안해도 괜찮음(선택)
+
+  ```python
+  def student(name= 'Jen', gpa): # => SyntaxError: non-default argument follows default argument
+      return name, gpa
+  
+  def student(gpa, name='Jen'):
+      return name, gpa
+  
+  print(student(4.0))
+  >>> ('Jen', 4.0)
+  ```
+
+<br/>
+
+### Positional Arguments Packing/Unpacking `*`
 
 * multiple positional arguments  ==>> parameter
 
-* Use to define the function for unknown-
+* Use to define the function which **doesn't know how many arguments** to receive
 
   ```python
   def add(*args, a):
@@ -138,73 +155,76 @@ def function_name(parameter):
   * Then, *args needs to be at the end?
 
     ```python
-    >>>def another_add(a, *args):
-    ... return a, args
+    def another_add(a, *args):
+    	return a, args
     
-    >>> print(another_add(1,2,3,4,5))
+    print(another_add(1,2,3,4,5))
+    >>> (1, (2, 3, 4, 5))
     ```
 
 <br/>
 
-### Keyword Arguments Packing/Unpacking
-
-#### **
+### Keyword Arguments Packing/Unpacking `**`
 
 * 함수가 임의의 개수 Argument를 keyword Argument로 호출될 수 있도록 지정
 
   ```python
-  >>> def add(**kwargs, a):
-    File "<stdin>", line 1:
-      def add(**kwargs, a):
-                        ^
-              
-  SyntaxError: invalid syntax
-  # a에게 값을 넣어줄 수 있는 방법이 없으니까!
-  # add(a=1, b=2, c=3) 이라고 해도 **kwargs가 값을 다 가져간다
-  ```
-
-  ```python
-  >>> def add(a, **kwargs):
-      return a, kwargs
+  def add(**kwargs, a): # SyntaxError: invalid syntax
+      return kwargs, a
   
-  >>> print(add(a=1, b=2, c=3))
-  (1, {'b':2, 'c':3})
+  # add(a=1, b=2, c=3) 이라고 해도 **kwargs가 값을 다 가져간다!!!!!!
+  ```
+  
+  ```python
+  def numbers(a, **kwargs):
+  	return a, kwargs
+  
+  print(numbers(1, b ='2', c ='3'))
   # 순서대로 a 먼저 자기 자리 찾아간 뒤에 묶으니까 가능!
   ```
+  
+  ```python
+  def characters(**kwargs):
+  	return kwargs
+  
+  print(characters(Batman='Wayne', Ironman='Stark', Spiderman='Parker'))
+  >>> {'Batman': 'Wayne', 'Ironman': 'Stark', 'Spiderman': 'Parker'}
+  
+  #Batman, Ironman, Spiderman은 딕셔너리의 키 X
+  #식별자(이름)일 뿐! 그래서 ''표시 필요 없음
+  ```
 
 <br/>
 
 <br/>
 
-## Scope
+## Scope 함수의 범위
 
-### Scope 함수의 범위
+* 함수는 코드 내부에 local scope를 생성하며, 그 외의 공간인 global scope로 구분한다
+* 식별자(Variable, 변수의 이름)들은 LEGB 순서로 찾아나가면 됨
 
-![Python - Variable Scope](6_Function.assets/스크린샷 2021-06-26 오후 3.21.03.png)
+<img src="6_Function.assets/스크린샷 2021-06-26 오후 3.21.03.png" alt="Python - Variable Scope" style="zoom:35%;" /> <img src="5_Function.assets/6385a29a0cc08eb5fad8382f721a868769a80dc8.png" alt="Python - Scope Of A Variable - Share - Dataquest Community" style="zoom:50%;" />
 
-[velog](https://velog.io/@idnnbi/Python-Variable-Scope)
+
 
 ```python
-a = 1
-
+a = 0
+b = 1
 def enclosed():
-    a = 20
-	
-    def local():
-        a = 300
-        print(a)
-	local()
-    print(a)
-    
+    a = 10
+    c = 4
+    def local(c):
+        print(a, b, c)
+        # => a는 바로 위의 10, b는 더 위의 1, c는 아래 local(400)에서 호출한 값 400 => 10 1 400
+    local(400)
+    print(a, b, c) # => 10 1 4
 enclosed()
-print(a)
+print(a, b) # 가장 바깥에 있으므로 global => 0 1
+
+>>> 10 1 400
+>>> 10 1 4
+>>> 0 1
 ```
-
-300
-
-20
-
-1
 
 * Example
 
