@@ -239,19 +239,6 @@
     print('My GPA is %.2f' % gpa)
     ```
   
-  * **str.format()** : Python 3.5v
-  
-    ```python
-    print('Hi, {}!'.format(name))
-    # print('Hi, {} and {}!'.format(name, name2))
-    ```
-  
-  * **f-strings** : python 3.6+ v
-  
-    ```python
-    print(f'Hi, {name}!')
-    ```
-  
     * formating / 형식 지정이 가능하다
   
       ```python
@@ -267,15 +254,29 @@
       print(f'오늘은 {today:%y}년 {today:%m}월 {today: %d}일이야.')
       ```
   
+  * **str.format()** : Python 3.5v
   
-    * 연산도 가능하다
+    ```python
+    print('Hi, {}!'.format(name))
+    # print('Hi, {} and {}!'.format(name, name2))
+    ```
   
-      ```python
-      a = 2.123
-      b = 4.351
-      print(f'가로가 {a:0.2f}, 세로가 {b:0.2f}일 때 사각형의 넓이는 {a * b:0.2f}')
-      ```
+  * **f-strings** : python 3.6+ v
   
-      가로가 2.12, 세로가 4.35일 때 사각형의 넓이는 9.24
-      
-      
+    ```python
+    print(f'Hi, {name}!')
+    ```
+  
+  
+      * 연산도 가능하다
+  
+        ```python
+        a = 2.123
+        b = 4.351
+        print(f'가로가 {a:0.2f}, 세로가 {b:0.2f}일 때 사각형의 넓이는 {a * b:0.2f}')
+        ```
+  
+        가로가 2.12, 세로가 4.35일 때 사각형의 넓이는 9.24
+        
+        
+  
