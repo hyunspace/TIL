@@ -136,6 +136,8 @@
 
 3. Loading(source) order (ex. 덮어쓰기)
 
+3. 상속
+
    ![CSS Specificity](02_css.assets/specificityimg.png)
 
 <br/>
