@@ -21,7 +21,7 @@ def postorder(v):
 
 N = int(input()) #노드의 개수
 tree = [list(input().split()) for _ in range(N)]
-
+print(tree)
 preorder('A')
 print()
 inorder('A')
