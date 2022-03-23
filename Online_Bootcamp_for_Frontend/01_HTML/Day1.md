@@ -45,8 +45,21 @@
 
 
 
-#### Validator
+#### Reference
 
-[W3C Markup Validation](https://validator.w3.org/#validate_by_input)
+**HTML Elements Reference**
+
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element
+
+**InternetingIsHard.com**
+
+- Introduction https://internetingishard.com/html-and-css/introduction/
+- Basic Web Pages https://internetingishard.com/html-and-css/basic-web-pages/
+- Links and Images https://internetingishard.com/html-and-css/links-and-images/
+- Semantic HTML https://internetingishard.com/html-and-css/semantic-html/
+
+**Validating HTML**
+
+http://validator.w3.org/
 
 * limitations : can't check misspelling or bad paths 
