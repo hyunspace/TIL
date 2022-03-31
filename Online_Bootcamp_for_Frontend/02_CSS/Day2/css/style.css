@@ -11,7 +11,9 @@ img {
 
 h1 {
   border: 5px dotted #cfbaf0;
+  text-align: center;
   /* background-color: #d8e2dc; */
+  /* border: 5px dashed blueviolet; */
 }
 
 blockquote {
@@ -28,4 +30,26 @@ cite {
 .bigbold {
   font-weight: bold;
   font-size: 1.3rem;
+}
+
+/* a tag Pseudo-classes */
+a:link {
+  font-weight: bold;
+  text-decoration: none;
+  color: #a3c4f3;
+}
+
+a:visited {
+  color: #90dbf4;
+  font-size: 2rem;
+}
+
+a:hover {
+  color: orange;
+  text-decoration: none;
+  background-color: white;
+}
+
+a.harvard:link {
+  color: maroon;
 }
