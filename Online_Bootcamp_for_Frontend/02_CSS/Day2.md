@@ -79,3 +79,12 @@ h2, h3 {
 
 
 
+## Tags
+
+### div vs section
+
+* Div is more general
+* Section has a meaning.
+
+### article
+
