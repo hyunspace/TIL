@@ -1,4 +1,5 @@
 from collections import deque
+
 # dfs로 바꿔서 풀어보기 ㅜㅜ
 def find_path(si, sj, cnt):
     visited = [[0] * M for _ in range(N)]
@@ -33,3 +34,15 @@ if result:
     print(min(result))
 else:
     print(-1)
+
+'''
+8 8
+01000100
+01010100
+01010100
+01010100
+01010100
+01010100
+01010100
+00010100
+'''
