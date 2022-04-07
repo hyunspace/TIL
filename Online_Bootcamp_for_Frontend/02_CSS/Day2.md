@@ -88,3 +88,14 @@ h2, h3 {
 
 ### article
 
+
+
+## rem, em
+
+* the width of the lowercase letter m is one m
+* 그래서 em을 쓰면 상대적인 단위이므로 다를 수 밖에 없음. 이걸 같게 해주려면 `rem`
+  * 16px이 기본이므로 1rem
+
+
+
+* 너비는 쓰더라도 높이는 쓰지 말 것
