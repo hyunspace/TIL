@@ -1,0 +1,36 @@
+body {
+  font-family: Arial, Hevetica, sans-serif;
+}
+
+nav {
+  border: 3px solid red;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 10px;
+  margin: 0px;
+}
+
+nav li {
+  border: 3px solid #219ebc;
+  width: 10rem;
+  background-color: #023047;
+  text-align: center;
+  margin-bottom: 0.7rem;
+  padding: 0.5rem
+}
+
+nav a {
+  border: 1px dotted #fb8500;
+  font-size: 1.5rem;
+  color: #ffb703;
+  font-weight: bold;
+  text-decoration: none;
+  display: block;
+}
+
+nav a:hover {
+  background-color: #fb8500;
+  color: white;
+}
