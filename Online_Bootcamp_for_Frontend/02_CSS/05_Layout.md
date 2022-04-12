@@ -56,3 +56,34 @@
 
 ## with Flexbox
 
+#### `Display: Flex;`
+
+* Flexbox is all about parents and children!
+
+  ![image-20220412235600397](05_Layout.assets/image-20220412235600397.png)
+
+  * `<ul>` is the **parent** and the **flex container**
+  * `<li>` is the **children** and the **flex items**
+  * No grandparent or grandchildren. They must be parents and children in order for Flexbox to work.
+
+ <br/>
+
+#### Direction & Wrap with Flex Flow
+
+* `flex-flow: row wrap;`
+
+![image-20220413000520216](05_Layout.assets/image-20220413000520216.png)
+
+* `flex-flow: column wrap;`
+
+![image-20220413000530475](05_Layout.assets/image-20220413000530475.png)
+
+* `nowrap` : the width is gonna be flexible
+
+<br/>
+
+#### Justify Content
+
+* `justify-content: flex-start:`
+
+* [a guide to flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
