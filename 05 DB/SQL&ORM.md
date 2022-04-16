@@ -60,7 +60,7 @@
 
 * MySQL, SQLite, Oracle, ...
 
-  * SQLite : 서버 형태X 파일 형식 O. 비교적 가벼운 데이터페이스
+  * SQLite : 서버 형태X 파일 형식 O. 비교적 가벼운 데이터베이스
 
     * Sqlite Data Type
 
@@ -80,7 +80,55 @@
 
 * 관계형 데이터베이스 관리시스템의 데이터 관리를 위해 설계된 특수 목적의 프로그래밍 언어
 * 데이터베이스 스키마 생성 및 수정, 자료 검색 및 관리 등에 활용
-* 
+
+#### SQL 분류
+
+![image-20220417013130918](SQL&ORM.assets/image-20220417013130918.png)
+
+#### SQL - Data Definition Language
+
+* CREATE : 테이블 생성
+
+  ```sql
+  .mode csv -- csv 파일 가져오기
+  .import hellodb.csv examples -- hellowdb.csv파일을 examples란 테이블로 불러오기
+  .tables   -- 현재 테이블 목록 확인
+  ```
+
+  ```sql
+  -- 테이블명 classmates, 컬럼명 id, name 생성
+  -- 괄호 내부에 스키마를 적어줌
+  CREATE TABLE classmates(
+  	id INTEGER PRIMARY KEY,
+  	name TEXT
+  );
+  
+  > .schema classmates -- 테이블의 스키마 확인
+  ```
+
+  ```sql
+  -- 테이블 생성 실습
+  CREATE TABLE classmates (
+  	name TEXT,
+  	age INT,
+  	address TEXT
+  );
+  ```
+
+* DROP : 테이블 제거(삭제)
+
+  ```sql
+  DROP TABLE classmates;
+  ```
+
+* ALTER : 테이블 변경
+
+#### SQL - Data Manipulation Language
+
+* INSERT : 새로운 데이터 삽입
+* SELECT : 조회
+* UPDATE : 데이터 갱신(수정)
+* DELETE : 데이터 삭제
 
 
 
