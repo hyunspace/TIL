@@ -40,15 +40,20 @@ header {
     list-style-type: None;
     text-decoration: None;
     color: #A51F10;
-    display: flex;
+    text-align: center;
+    /* display: flex;
     justify-content: center;
     margin: 0px;
-    padding: 0px;  
+    padding: 0px;   */
+}
+
+nav li {
+    display: inline-block;
 }
 
 .navitem {
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
 
 section {
