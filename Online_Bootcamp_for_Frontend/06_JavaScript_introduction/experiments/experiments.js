@@ -22,12 +22,12 @@ console.log(myName)
 
 
 // template strings
-const firstName = "Jihyun"
-const lastName = "Kim"
+// const firstName = "Jihyun"
+// const lastName = "Kim"
 
-const sentence = `Hello ${firstName} ${lastName}! How are you?!`
-console.log(sentence)
+// const sentence = `Hello ${firstName} ${lastName}! How are you?!`
+// console.log(sentence)
 
-const isTheSkyBlue = true
+// const isTheSkyBlue = true
 
-console.log(isTheSkyBlue)
+// console.log(isTheSkyBlue)

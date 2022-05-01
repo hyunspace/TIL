@@ -2,6 +2,9 @@
 
 * **irreducible**
   * what we cannot split into further other things
+* **NOT object**
+* the value of the type will be assigned into variable
+* the origin value will be copied
 
 ## Strings
 
