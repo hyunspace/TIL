@@ -21,6 +21,13 @@
 
 ### 변수 선언 키워드
 
+* `const` 
+  * 재선언X 재할당X 블록스코프
+* `let`
+  * 재선언X 재할당O 블록스코프
+* `var`
+  * 재선언O 재할당O 함수스코프O + 호이스팅
+
 <img src="02_Variable&Identifier.assets/images%2Fcyongchoi%2Fpost%2F3094454c-831a-4c97-b629-a02ad81df959%2Fconst-vs-let-vs-var.png" alt="img" style="zoom: 25%;" />
 
 * 선언 Declaration
@@ -51,11 +58,14 @@
   * var의 특성 중 하나
   * 변수 선언 이전에, 변수를 미리 참조함
 
+* `let` vs `const`
 
+  ![image-20220502010645148](02_variable&identifier.assets/image-20220502010645148.png)
 
+  * 일단 const를 쓰고, 재할당이 필요해지면 그때 let으로 바꾸자. 보수적으로!
+  * 생각보다 let이 필요한 경우가 별로 없다!
 
-
-
+<br/>
 
 ## Reference
 
