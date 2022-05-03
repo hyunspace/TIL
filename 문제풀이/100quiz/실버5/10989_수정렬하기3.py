@@ -4,6 +4,7 @@ input = sys.stdin.readline
 
 N = int(input())
 counting = [0] * 10001
+
 for _ in range(N):
     counting[int(input())] += 1
 

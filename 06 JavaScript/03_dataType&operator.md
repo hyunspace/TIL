@@ -24,46 +24,42 @@
   console.log(message)		// Buongorno!
   ```
 
-  * 숫자
 
-    * 정수, 실수 구분 X => 부동 소수점 형식
-    * **NaN** (Not-a-Number) : 계산 불가능할 경우 자동 반환
-    * 무한을 나타내는 `Infinity`, -`Infinity`
+#### 숫자
 
-  * 문자열
+* 정수, 실수 구분 X => 부동 소수점 형식
+* **NaN** (Not-a-Number) : 계산 불가능할 경우 자동 반환
+* 무한을 나타내는 `Infinity`, -`Infinity`
 
-    * 16비트 유니코드 문자의 집합
+#### 문자열
 
-    * **Template Literal**
+* 16비트 유니코드 문자의 집합
 
-      * 따옴표가 아닌 백틱
+* **Template Literal**
 
-      * ${expression} 형태
+  * 따옴표가 아닌 백틱
 
-        ```javascript
-        const a = 'Hello'
-        `${a}, World!`		// Hello, World!
-        ```
+  * ${expression} 형태
 
-  * undefined/null
+    ```javascript
+    const a = 'Hello'
+    `${a}, World!`		// Hello, World!
+    ```
 
-    * undefined => 변수 선언 이후 직접 값을 할당하지 않으면, 자동으로 undefined가 할당
+#### undefined/null
 
-    * null => 변수의 값이 없음을 **의도적으로 표현**할 때
+* undefined => 변수 선언 이후 직접 값을 할당하지 않으면, 자동으로 undefined가 할당
 
-      * _원시타입이지만, **object 타입**_
+* null => 변수의 값이 없음을 **의도적으로 표현**할 때
 
-      ![image-20220501190433973](03_dataType.assets/image-20220501190433973.png)
+  * _원시타입이지만, **object 타입**_
 
-  * Boolean
+  ![image-20220501190433973](03_dataType.assets/image-20220501190433973.png)
 
-    * **ToBoolean Conversions (자동 형변환)**
+#### Boolean
 
-      ![image-20220501190703346](03_dataType.assets/image-20220501190703346.png)
-
-      * **object는 항상 참이므로, 빈 배열 역시 참이다**
-
-  ![image-20220501185832614](03_dataType.assets/image-20220501185832614.png)
+* **ToBoolean Conversions (자동 형변환)**![image-20220501190703346](03_dataType.assets/image-20220501190703346.png)
+* **object는 항상 참이므로, 빈 배열 역시 참이다**![image-20220501185832614](03_dataType.assets/image-20220501185832614.png)
 
 <br/>
 
