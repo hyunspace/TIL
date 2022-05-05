@@ -110,10 +110,10 @@
   x/= 10
   console.log(x)	// 7
   
-  x++				// x += 1과 동일
+  x++				// x += 1과 동일하지만 for문에 자주 쓰고, 그 외에는 X
   console.log(x)	// 8
   
-  x--				// x -= 1과 동일
+  x--				// x -= 1과 동일하지만 for문에 자주 쓰고, 그 외에는 X
   console.log(x)	// 7
   ```
 
@@ -166,7 +166,7 @@
 
 * 가장 왼쪽의 조건식이 참이면 콜론 앞의 값, 그렇지 않으면 뒤의 값
 
-  `조건식 ? true면 반환 : false면 반환`
+  `조건식 ? true일 때 반환 : false일 때 반환`
 
   ```javascript
   console.log(true ? 1 : 2) // 1
