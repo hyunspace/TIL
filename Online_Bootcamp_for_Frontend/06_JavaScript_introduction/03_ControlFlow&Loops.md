@@ -39,3 +39,101 @@ console.log(greeting)
 
 ## Equality Comparisons
 
+### ===
+
+* just stick with triple equals!
+
+```javascript
+if (2 + 2 === 4) {
+  console.log('Hooray! Math still works.')
+} else {
+  console.log('Uh, panic?')
+}
+>>> true
+```
+
+<br/>
+
+### ==
+
+```javascript
+if (2 + 2 == '4') {
+  console.log('Hooray! Math still works.')
+} else {
+  console.log('Uh, panic?')
+}
+>>> true
+```
+
+<br/>
+
+## If Statement
+
+* Exactly one of these is always going to be executed, unless there's no else.
+
+  ```javascript
+  const areTheLightsOn = true
+  
+  if (areTheLightsOn) {
+    // turn the lights off
+  } else {
+    // turn the lights on
+  }
+  ```
+
+  * if there's no else and `areTheLightsOn` is false, it just skips and goes on its merry way.
+
+<br/>
+
+## Else If Statement
+
+```javascript
+const friendsAtYourParty = 10
+
+if (friendsAtYourParty === 0) {
+    console.log('Coolm now I have all the nachos to myself.')
+} else if (friendsAtYourParty >= 4) {
+    console.log('Perfect amount to play some Kartrider.')
+} else {
+    console.log('Woooooo, play the dance music!')
+}
+```
+
+<br/>
+
+<br/>
+
+## Loops
+
+* without loops
+
+  ```javascript
+  let friendsAtYourParty = 0
+  
+  friendsAtYourParty = friendsAtYourParty + 1
+  friendsAtYourParty = friendsAtYourParty + 1
+  friendsAtYourParty = friendsAtYourParty + 1
+  friendsAtYourParty = friendsAtYourParty + 1
+  friendsAtYourParty = friendsAtYourParty + 1
+  friendsAtYourParty = friendsAtYourParty + 1
+  friendsAtYourParty = friendsAtYourParty + 1
+  friendsAtYourParty = friendsAtYourParty + 1
+  friendsAtYourParty = friendsAtYourParty + 1
+  friendsAtYourParty = friendsAtYourParty + 1
+  
+  console.log(friendsAtYourParty)
+  ```
+
+* `while`
+
+  ```javascript
+  let friendsAtYourParty = 0
+  
+  while (friendsAtYourParty < 10) {
+    friendsAtYourParty = friendsAtYourParty + 1
+  }
+  
+  console.log(friendsAtYourParty)
+  ```
+
+  
