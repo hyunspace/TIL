@@ -34,3 +34,4 @@ if sum(budgets) <= max_budget:
     print(sum(budgets))
 else:
     find_max(0, N, max_budget)
+    print(ans)
