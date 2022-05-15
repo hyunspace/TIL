@@ -35,7 +35,7 @@
 * 최종적으로 사용자가 보는 것은 HTML! 이걸 누가 렌더링하느냐.
   * 뼈대만 받고 브라우저에서 동적으로 DOM을 만든다!
 
-![img](https://miro.medium.com/max/1400/1*CRiH0hUGoS3aoZaIY4H2yg.png)
+![img](01_intro.assets/1CRiH0hUGoS3aoZaIY4H2yg.png)
 
 * 장점
   * 서버와 클라이언트 간 트래픽 감소
@@ -50,7 +50,7 @@
 
 * 참고
 
-  ![img](https://miro.medium.com/max/1400/1*jJkEQpgZ8waQ5P-W5lhxuQ.png)
+  ![img](01_intro.assets/1jJkEQpgZ8waQ5P-W5lhxuQ.png)
 
   * The main difference is that for **SSR your server’s response to the browser is the HTML of your page that is ready to be rendered**, while for **CSR the browser gets a pretty empty document** with links to your javascript. That means your browser will start rendering the HTML from your server without having to wait for all the JavaScript to be downloaded and executed.
   * Django 템플릿에서 {% for ~ %}  코드를 넘겨도 사용자는 잘 정리된 걸 받는다. 이거 장고 서버에서 다 변환해서 보내준거임 SSR!
@@ -125,7 +125,7 @@
 
 * 선언적 렌더링
 
-  ![image-20220515155958692](/Users/hyun/Desktop/Hyun/TIL/07 Vue/01_intro.assets/image-20220515155958692.png)
+  ![image-20220515155958692](01_intro.assets/image-20220515155958692.png)
 
 * 사용자 입력 핸들링
 

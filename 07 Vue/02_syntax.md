@@ -24,7 +24,7 @@
 
 * 참고
 
-  ![img](/Users/hyun/Desktop/Hyun/TIL/07 Vue/02_syntax.assets/lNUAA.png)
+  ![lNUAA](02_syntax.assets/lNUAA.png)
 
   * `Class` : a specification, blueprint for an object
 
@@ -60,14 +60,38 @@
 * **Vue 객체 내 다른 함수에서 this 키워드 통해 접근 가능**
   * 화살표 함수 XXX
 
-#### methods
+#### methods ()
 
 * 행동!
+  * 데이터를 바꾸는 로직 위주 => setter 함수
+
 * 중괄호를 통해 접근 가능
 * v-on(`@`)과 같은 directive에서도 사용 가능
 * **Vue 객체 내 다른 함수에서 this 키워드 통해 접근 가능**
   * 화살표 함수 XXX
   * 화살표 함수는 부모 context를 바인딩하기 때문에, this가 Vue 인스턴스를 가리키지 않는다
+
+#### computed
+
+* 데이터를 기반으로 하는, 데이터에 의존하는 **계산'된'  속성(값)**
+
+  * 데이터를 활용해서 새로운 '값'을 뽑아낼 때!
+  * 데이터를 통한 값을 얻을 때 => getter 함수
+
+* 함수의 형태로 정의하지만 함수가 아닌 **함수의 반환 값이 바인딩**
+
+  => **반드시 반환값이 있어야 한다**
+
+* **종속된 데이터가 변경될 때만 함수를 실행**
+
+### watch
+
+* 특정값이 바뀌면 다른 작업을 한다! (computed는 해당 값을 재계산해서 보여주고 끝)
+
+### filter
+
+* 텍스트 형식화를 적용할 수 있는 필터
+* `{{}}` 또는 `v-bind` 쓸 때 사용
 
 <br/>
 
@@ -202,23 +226,114 @@
 #### v-show
 
 * `v-show="A"` A가 true일 때 보여준다
-* 문서에 있지만(렌더링 해두지만) `display: none` 값을 줘서 안 보이게 하는 것 뿐
-* 눈에 보이는지, 아닌지가 핵심! => 토글이 잦을 때 사용한다
 
-#### v-if
+* 문서에 있지만(렌더링 해두지만) `display: hidden` 값을 줘서 안 보이게 하는 것 뿐
+
+  => 렌더링 횟수가 단 한번이라면 `v-if`에 비해 상대적으로 렌더링 비용이 높음 (렌더링 했는데도 안 쓰이니까)
+
+  * **눈에 보이는지, 아닌지가 핵심**! => 토글이 잦을 때 사용한다 => 토글 비용 낮음
+
+* **Expensive initial load, cheap toggle**
+
+#### v-if, v-else-if, v-else
 
 * `v-if="B"` B가 true일 때만 **렌더링해서** 보여준다
-* 
+  * 즉, 전달인자가 false인 경우 **렌더링 XXX** => 렌더링 비용 낮음
+  * 자주 변경 되는 요소의 경우 매번 렌더링 해야하므로 토글 비용 증가할 수 있음
+
+* **Cheap initial load, expensive toggle**
+
+#### v-for
+
+* `item in items`
+* v-for 사용시 **반드시 key 속성을 각 요소에 작성**
+  * 개별 DOM 노드들을 추적하고 기존 엘리먼트를 재사용, 재정렬하려고!
+  * array의 요소가 실시간으로 바뀔 때, 유일한 값인 key를 통해서 접근!
+* v-if와 함께 사용하는 경우 v-for의 우선순위가 더 높음
+  * 가능하다면 동시 사용X
+* `v-if="(value, index) in arr"` : array 순회
+  * 순회하며 출력할 때에는 index 먼저 쓰면 index먼저 나옴 하지만 v-if 값으로 넣을때는 무조건 인덱스가 뒤로 가야한다!
+
+#### v-bind
+
+* 태그의 기본 속성들과 Vue를 연결 시켜줄 때 사용하는 것
+  * ex) `<img v-bind:scr="imgSrc" alt="">`
+* 축약형은 `:`
+* 자바스크립트 객체식으로 넘기면 된다
+* **클래스 바인딩**도 가능하다!
+  * `<div :class="{ active : isRed }">`
+    * isRed가 true라면! active도 true가 돼서 들어감
+  * `<div :class="[activeRed, myBackGround]">` : 여러개의 클래스를 바인딩
+
+* **스타일 바인딩**
+  * `<p :style="{ fontSize: fontSize + 'px' }">`
+    * font-size로 보내주면 자바스크립트는 `-`를 연산자로 이해하기 때문에 그렇게 보내면 안된다. 자바스크립트와 마크업 언어 사이의 기싸움?!
+    * 두번째 fontSize는 데이터로 연동할 부분, 앞의 font-size로 바뀌어서 스타일에 들어갈 거임
+
+#### v-on
+
+* **엘리먼트에 이벤트 리스너를 연결** => 특정 이벤트가 발생했을 때 주어진 코드가 실행 됨
+
+* 축약형은 `@`
+
+* 이벤트 유형은 전달인자로 표시함
+
+  * button을 누르면 `alertHello` 메서드가 실행
+
+  ```html
+  <div id="app">
+      <!-- 메서드 핸들러 -->
+      <button v-on:click="alertHello">Button</button>    
+      <button @click="alertHello">Button</button>    
+  
+      <!-- 기본 동작 방지 -->
+      <form action="" @submit.prevent="alertHelloo">
+  		<button>GoGo</button>
+      </form>
+      
+      <!-- 키 별칭을 이용한 키 입력 수식어 -->
+      <input type="text" @keyup.space="log">
+      <!-- cb 함수에서 특수 문법 () -->
+      <input type="text" @keyup.space="log('a')"> <!--실행하게 되면 a를 인자로 넘길게!-->
+      
+  </div>
+  ```
+
+  ```javascript
+  <script>
+      const app = new Vue({
+          el: '#app',
+          data: {
+              message: 'Hello Vue',
+          },
+          methods: {
+              alertHello: function () {
+                  alert('hello')
+              }
+          }
+      })
+  ```
+
+* `@input`
+  * input에 값이 들어오면 무조건 반영함
+    * ex) 안녕 => ㅇ/아/안/안ㄴ/안녀/안녕
+
+#### v-model
+
+* HTML form 요소의 값과 Data를 **양방향으로 바인딩**
+
+* 수식어
+  * `.lazy` : input 대신 change 이벤트 이후에 동기화
+  * `.number` : 문자열을 숫자로 변경
+  * `.trim` : 입력에 대해 trim 진행(왼오 둘다)
+
+* 단방향 예시
+
+  ![image-20220516004044362](02_syntax.assets/image-20220516004044362.png)
 
 
 
-
-
-
-
-
-
-## References
+<br/>
 
 ## References
 
