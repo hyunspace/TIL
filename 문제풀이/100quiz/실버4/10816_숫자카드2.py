@@ -1,3 +1,5 @@
+# 5월 13일
+
 import sys; sys.setrecursionlimit(10**6)
 
 def cnt_card(goal, start, end):
@@ -28,7 +30,7 @@ for card in cards:
     if card not in cnt_dict:
         # print(target, cnt_dict)
         cnt_dict[card] = cnt_card(card, 0, N)
-    print(cnt_dict)
+print(cnt_dict)
 
 for target in targets:
     if target in cnt_dict:
