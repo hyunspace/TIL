@@ -2,13 +2,13 @@
 
 * Code is procedural
 
-
-
 <br/>
 
 ## how to declare a variable
 
 #### const
+
+* **a key word in JS the same like I'm declaring a new variable**
 
 * no longer be altered
 * no longer be assigned
@@ -21,12 +21,6 @@
 
 * old way to declare
 * no reason to use anymore
-
-<br/>
-
-### camel Casing
-
-* 
 
 <br/>
 
