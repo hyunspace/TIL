@@ -1,4 +1,5 @@
 // const monthlyRent = 500
+// console.log(monthlyRent)
 
 // let yearlyRent = monthlyRent * 12
 // console.log(monthlyRent, yearlyRent)
