@@ -50,6 +50,14 @@ if (2 + 2 === 4) {
   console.log('Uh, panic?')
 }
 >>> true
+
+
+if (2 + 2 === "4") {
+  console.log('Hooray! Math still works.')
+} else {
+  console.log('Uh, panic?')
+}
+>>> false
 ```
 
 <br/>
@@ -91,7 +99,7 @@ if (2 + 2 == '4') {
 const friendsAtYourParty = 10
 
 if (friendsAtYourParty === 0) {
-    console.log('Coolm now I have all the nachos to myself.')
+    console.log('Cool. now I have all the nachos to myself.')
 } else if (friendsAtYourParty >= 4) {
     console.log('Perfect amount to play some Kartrider.')
 } else {
@@ -136,4 +144,26 @@ if (friendsAtYourParty === 0) {
   console.log(friendsAtYourParty)
   ```
 
-  
+
+<br/>
+
+### Incrementing
+
+
+
+
+
+<br/>
+
+## Adding Comments
+
+```javascript
+// this is some comment to my future self
+
+/* this is
+
+too */
+```
+
+<br/>
+
