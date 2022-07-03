@@ -149,7 +149,39 @@ if (friendsAtYourParty === 0) {
 
 ### Incrementing
 
+```javascript
+let friendsAtYourParty = 0;
 
+while (friendsAtYourParty < 10) {
+    friendsAtYourParty = friendsAtYourParty + 1;
+    friendsAtYourParty += 1;
+    friendsAtYourParty ++;
+    ++friendsAtYourParty;
+    // 모두 같은 식 but ++는 뒤에만 쓴다!
+    console.log(friendsAtYourParty)
+}
+```
+
+<br/>
+
+### Incrementing in Loops
+
+```javascript
+let friendsAtYourParty = 0;
+
+for (let i = 0; i <=10; i++) {
+    friendsAtYourParty++;
+}
+```
+
+`for ( A ; B ; C) {};`
+
+* A: **the control variable for this particular loop**
+  * `i`일 필요는 없지만 다들 항상 `i`를 쓴다
+* B: **the control statement**
+  * keep doing this until `i` is less than or equal to 10
+* C: **run this statement at the end of every loop**
+  * 반복이 끝날 때마다 `i`에 1씩 더해나감
 
 
 
