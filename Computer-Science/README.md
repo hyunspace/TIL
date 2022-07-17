@@ -34,7 +34,7 @@
 | 1   | :white_check_mark:   | 22년 7월 9일  | [2장 네트워크 모델](./네트워크/2장-네트워크-모델.md)        |     |
 | 1   | :white_check_mark:   | 22년 7월 10일 | [3장 데이터 통신](./네트워크/3장-데이터-통신.md)          |     |
 | 1   | :white_check_mark:   | 22년 7월 17일 | [4장 IP 주소](./네트워크/4장-IP-주소.md)            |     |
-| 1   | :white_large_square: |            | 5장 ARP 프로토콜                               |     |
+| 1   | :white_check_mark:   | 22년 7월 17일 | [5장 ARP 프로토콜](./네트워크/5장-ARP-프로토콜.md)      |     |
 | 1   | :white_large_square: |            | 6장 IPv4, ICMP 프로토콜                        |     |
 | 2   | :white_large_square: |            | 7장 전송계층 및 포트                              |     |
 | 2   | :white_large_square: |            | 8장 UDP 비연결지향형                             |     |
