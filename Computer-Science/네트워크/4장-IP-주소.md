@@ -18,7 +18,7 @@
 
 * LAN과 LAN을 연결
   
-  <img src="4장-IP-주소.assets/2022-07-17-17-59-53-image.png" title="" alt="" data-align="left">
+  <img title="" src="4장-IP-주소.assets/2022-07-17-17-59-53-image.png" alt="" data-align="left" width="403">
   
   * 서로 다른 네트워크 대역을 연결하기 위해 **라우터** 사용
 

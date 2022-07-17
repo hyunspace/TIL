@@ -61,7 +61,7 @@
 
 ## APR 프로토콜의 통신 과정
 
-![](5장-ARP-프로토콜.assets/2022-07-17-19-35-58-image.png)
+<img src="5장-ARP-프로토콜.assets/2022-07-17-19-35-58-image.png" title="" alt="" width="599">
 
 * A가 C의 맥주소가 궁금할 때!
   
@@ -83,7 +83,7 @@
     
     * 브로드캐스트는 같은 대역 내에서만! 그래서 바깥으로 보내진 않고 안에서만 해결함
     
-    ![](5장-ARP-프로토콜.assets/2022-07-17-19-39-48-image.png)
+    <img src="5장-ARP-프로토콜.assets/2022-07-17-19-39-48-image.png" title="" alt="" width="482">
     
     => 이더넷 까고, 3계층을 까본다
     
@@ -91,7 +91,7 @@
     
     출발지 맥주소에 자신의 맥주소를 써서 보내준다!
     
-    <img title="" src="5장-ARP-프로토콜.assets/2022-07-17-19-41-03-image.png" alt="" width="246"><img src="5장-ARP-프로토콜.assets/2022-07-17-19-42-49-image.png" title="" alt="" width="263">
+    <img title="" src="5장-ARP-프로토콜.assets/2022-07-17-19-41-03-image.png" alt="" width="246"> <img src="5장-ARP-프로토콜.assets/2022-07-17-19-42-49-image.png" title="" alt="" width="263">
   
   * 스위치에게 보내면 스위치는 이더넷만 까보고 A한테 바로 보내준다
   
