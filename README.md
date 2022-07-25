@@ -10,11 +10,11 @@
 
 * [Django](https://github.com/hyunspace/TIL#Django)
 
-* [DB](https://github.com/hyunspace/TIL#DB)
+* [DB](https://github.com/hyunspace/TIL#db)
 
-* [HTML & CSS](https://github.com/hyunspace/TIL#HTML%26CSS)
+* [HTML & CSS](https://github.com/hyunspace/TIL#htmlcss)
 
-* [JavaScript](https://github.com/hyunspace/TIL#JavaScript)
+* [JavaScript](https://github.com/hyunspace/TIL#javascript)
 
 * [Python](https://github.com/hyunspace/TIL#Python)
 
@@ -28,9 +28,9 @@
 
 #### Computer Science
 
-* [Network](https://github.com/hyunspace/Computer-Science/Network)
+* [Network](https://github.com/hyunspace/TIL/tree/master/Computer-Science/네트워크)
 
-* [정보처리기사](https://github.com/hyunspace/Computer-Science/Network/정보처리기사)
+* [정보처리기사](https://github.com/hyunspace/TIL/tree/master/Computer-Science/정보처리기사)
 
 #### Projects
 
@@ -38,40 +38,40 @@
 
 #### Django
 
-* [Lecture Notes](https://github.com/hyunspace/TIL/Django/Lecture-Notes)
+* [Lecture Notes](https://github.com/hyunspace/TIL/tree/master/Django/Lecture-Notes)
 
 #### DB
 
-* [Lecture Notes](https://github.com/hyunspace/TIL/DB/Lecture-Notes)
+* [Lecture Notes](https://github.com/hyunspace/TIL/tree/master/DB/Lecture-Notes)
 
 #### HTML&CSS
 
-* [Lecture Notes](https://github.com/hyunspace/TIL/HTML%26CSS/Lecture-Notes)
+* [Lecture Notes](./HTML%26CSS/Lecture-Notes)
 
-* [Online Bootcamp for Frontend](https://github.com/hyunspace/TIL/HTML%26CSS/Online-Bootcamp-for-Frontend)
+* [Online Bootcamp for Frontend](./HTML%26CSS/Online-Bootcamp-for-Frontend)
 
 #### JavaScript
 
-* [Lecture Notes](https://github.com/hyunspace/TIL/JavaScript)
+* [Lecture Notes](./JavaScript/Lecture-Notes)
 
 #### Python
 
-* [Lecture Notes](https://github.com/hyunspace/Python/Lecture-Notes)
+* [Lecture Notes](./Python/Lecture-Notes)
 
 #### React
 
 * 처음 만난 리액트
   
-  * [준비하기](https://github.com/hyunspace/TIL/React/처음-만난-리액트/00_준비하기.md)
+  * [준비하기](./React/처음-만난-리액트/00_준비하기.md)
   
-  * [리액트 소개](https://github.com/hyunspace/TIL/React/처음-만난-리액트/01_리액트-소개.md)
+  * [리액트 소개](./React/처음-만난-리액트/01_리액트-소개.md)
   
-  * [리액트 시작하기](https://github.com/hyunspace/TIL/React/처음-만난-리액트/02_리액트-시작하기.md)
+  * [리액트 시작하기](./React/처음-만난-리액트/02_리액트-시작하기.md)
   
-  * [JSX](https://github.com/hyunspace/TIL/React/처음-만난-리액트/03_JSX.md)
+  * [JSX](./React/처음-만난-리액트/03_JSX.md)
   
-  * [Rendering Elements](https://github.com/hyunspace/TIL/React/%EC%B2%98%EC%9D%8C-%EB%A7%8C%EB%82%9C-%EB%A6%AC%EC%95%A1%ED%8A%B8/04_Rendering-Elements.md)
+  * [Rendering Elements](./React/처음-만난-리액트/04_Rendering-Elements.md)
 
 #### Vue.js
 
-* [Lecture Notes](https://github.com/hyunspace/TIL/Vuejs/Lecture-Notes)
+* [Lecture Notes](./Vuejs/Lecture-Notes)
