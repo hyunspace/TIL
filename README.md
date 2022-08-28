@@ -26,11 +26,13 @@
 
 * [TIL-APS Respository](https://github.com/hyunspace/TIL-APS)
 
-#### Computer Science
+#### [Computer Science](./Computer-Science)
 
-* [Network](https://github.com/hyunspace/TIL/tree/master/Computer-Science/네트워크)
+* OS
 
-* [정보처리기사](https://github.com/hyunspace/TIL/tree/master/Computer-Science/정보처리기사)
+* Network
+
+* 정보처리기사
 
 #### Projects
 
