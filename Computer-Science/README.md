@@ -25,8 +25,8 @@
 | 차시  | 진행상태                 | 학습일자       | 강의 내용                                | 비고  |
 | --- | -------------------- | ---------- | ------------------------------------ | --- |
 | 1   | :white_check_mark:   | 22년 8월 28일 | Introduction to Operating Systems    |     |
-| 2   | :white_large_square: |            | System Structure & Program Execution |     |
-| 2   | :white_large_square: |            | System Structure & Program Execution |     |
+| 2   | :white_large_square: | 22년 9월 4일  | System Structure & Program Execution |     |
+| 2   | :white_large_square: | 22년 9월 4일  | System Structure & Program Execution |     |
 | 3   | :white_large_square: |            | Process 1                            |     |
 | 3   | :white_large_square: |            | Process 2                            |     |
 | 3   | :white_large_square: |            | Process 3                            |     |
