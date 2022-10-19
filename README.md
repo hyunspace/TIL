@@ -60,19 +60,15 @@
 
 * [Lecture Notes](./Python/Lecture-Notes)
 
-#### React
+#### [React](./React)
 
-* 처음 만난 리액트
+* [처음 만난 리액트](./React/처음-만난-리액트)
   
-  * [준비하기](./React/처음-만난-리액트/00_준비하기.md)
+  * [강의 링크](https://www.inflearn.com/course/처음-만난-리액트/)
+
+* [React 완벽 가이드 with Redux, Next.js, TypeScript](./React/React-The-Complete-Guide)
   
-  * [리액트 소개](./React/처음-만난-리액트/01_리액트-소개.md)
-  
-  * [리액트 시작하기](./React/처음-만난-리액트/02_리액트-시작하기.md)
-  
-  * [JSX](./React/처음-만난-리액트/03_JSX.md)
-  
-  * [Rendering Elements](./React/처음-만난-리액트/04_Rendering-Elements.md)
+  * [강의 링크](https://www.udemy.com/course/best-react)
 
 #### Vue.js
 
