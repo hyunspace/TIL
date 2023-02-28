@@ -63,13 +63,35 @@
 
 
 
-## 1. Python-Django
+## Python-Django
 
 > Feb 27, 2023 -
 
+### 1. Basic Setting
+
+* virtual environment
+
+  ```bash
+  $ python -m venv venv
+  $ source venv/Scripts/activate
+  ```
+
+* Install
+
+  ```bash
+  $ pip install django==3.2.15 djangorestframework
+  $ pip freeze > requirements.txt
+  ```
+
+* Create App
+
+  ```bash
+  $ django-admin startproject [project name] .
+  ```
+
+  * `.` 을 붙여야 현재 디렉토리에 프로젝트가 생성 됨
 
 
-<br/>
 
 
 
@@ -77,9 +99,9 @@
 
 > 
 
+<br/>
 
-
-## 2. Java-Spring
+## Java-Spring
 
 
 
