@@ -13,7 +13,7 @@
 ################
 # 🧮 : Algorithm Problem Solving
 # 🖥️ : Computer Science
-# 💽 : DB
+# 💽 : DB, SQL
 # 📗 : Django
 # 🎨 : HTML & CSS
 # ☕ : Java
