@@ -91,7 +91,11 @@
 
   * `.` 을 붙여야 현재 디렉토리에 프로젝트가 생성 됨
 
-
+* settings.py 수정하기
+  * SECRET_KEY를 노출한 채로 그대로 git에 업로드하면 안된다
+  * secrets.json 파일에 키를 저장하고, settings.py에서 해당 파일의 값을 불러와서 실행하도록 한다
+  * .gitignore에 secrets.json을 추가하여 SECRET_KEY가 업로드 되지 않도록 한다.
+  * [참고사이트](https://velog.io/@bom8231/Django-secret-key-%EB%B6%84%EB%A6%AC%ED%95%98%EA%B8%B0)
 
 
 
