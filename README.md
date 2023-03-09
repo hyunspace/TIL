@@ -24,6 +24,8 @@
 
 * [Spring](https://github.com/hyunspace/TIL#Spring)
 
+* [SQL](https://github.com/hyunspace/TIL#SQL)
+
 * [Vue.js](https://github.com/hyunspace/TIL#Vuejs)
 
 #### Algorithm Problem Solving (APS)
@@ -85,3 +87,8 @@
 #### Spring
 
 * [스프링 입문 - 코드로 배우는 스프링 부트, 웹 MVC, DB 접근 기술](./Spring/KimYoungHan/01-Spring-Intro)
+
+#### SQL
+
+* [SQLD 자격증 공부](./SQL/SQLD)
+
