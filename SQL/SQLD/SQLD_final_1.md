@@ -342,7 +342,7 @@
 >    1. 있다면 roll up 또는 cube
 >       * 둘 다 결과가 있다면(행의 수가 많아 보이면) cube
 >       * 계층화 되어 있다면(행의 수가 적어 보이면) roll up
->    2. 없다면 group-ingests
+>    2. 없다면 grouping sets
 
 #### ROLL UP
 
