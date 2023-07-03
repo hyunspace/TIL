@@ -69,6 +69,9 @@
 #### Python
 
 * [Lecture Notes](./Python/Lecture-Notes)
+* [Best-100-Days-Python](./Python/Best-100-Days-Python)
+  * [강의 링크](https://www.udemy.com/course/best-100-days-python/)
+
 
 #### [React](./React)
 
