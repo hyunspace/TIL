@@ -47,6 +47,7 @@
 #### Django
 
 * [Lecture Notes](https://github.com/hyunspace/TIL/tree/master/Django/Lecture-Notes)
+* [Django 프레임워크로 주식 검색 웹 만들기](https://github.com/hyunspace/TIL/tree/master/Django/Django-stock_web)
 
 #### DB
 
