@@ -1,0 +1,43 @@
+# Python bytecode
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+*.egg
+
+# Conda & virtual envs
+.env
+.venv/
+env/
+venv/
+*.conda
+*.env
+
+# VSCode project settings
+.vscode/
+
+# macOS
+.DS_Store
+
+# Airflow-specific
+logs/
+airflow.db
+*.pid
+*.err
+*.log
+unittests.cfg
+airflow.cfg
+webserver_config.py
+
+# Jupyter notebook checkpoints
+.ipynb_checkpoints/
+
+# SQLite backup
+*.sqlite
+*.sqlite3
+
+# Output files (text/csv/etc.)
+*.txt
+*.csv
+\
