@@ -12,6 +12,7 @@
 
 ################
 # 🧮 : Algorithm Problem Solving
+# 💨 : Airflow
 # 🖥️ : Computer Science
 # 💽 : DB, SQL
 # 📗 : Django
